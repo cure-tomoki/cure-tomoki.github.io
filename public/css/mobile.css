@@ -13,6 +13,7 @@
     section.content
     {
         width: 100%;
+        padding: unset;
     }
 
     section#content-left
@@ -20,6 +21,23 @@
         height: 90vw;
 
         text-align: unset;
+    }
+
+    div#profile-wrapper
+    {
+        position: unset;
+        top: unset;
+
+        transform: unset;
+    }
+
+    h1#name-card__name
+    {
+        font-size: 2.5em;
+    }
+    span#name-card__description
+    {
+        font-size: 1.2em;
     }
 
     img#profile-img
@@ -30,6 +48,7 @@
         width: 100%;
         max-width: unset;
 
+        border: unset;
         border-radius: unset;
     }
 
@@ -53,5 +72,10 @@
 
         height: unset;
         padding: 0 1.5em 1em;
+    }
+
+    h1.heading-title:first-child
+    {
+        font-size: 2.2em;
     }
 }
