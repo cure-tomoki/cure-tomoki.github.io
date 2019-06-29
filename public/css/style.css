@@ -25,6 +25,23 @@ ul
     padding-left: 1em;
 }
 
+ul.slash-list > li
+{
+    display: inline-block;
+}
+
+ul.slash-list > li::after
+{
+    margin: 0 .3em;
+
+    content: '/';
+}
+
+ul.slash-list > li:last-child::after
+{
+    display: none;
+}
+
 li
 {
     line-height: 1.5em;
