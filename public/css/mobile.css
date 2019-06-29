@@ -1,0 +1,45 @@
+/*
+ * stylesheet for mobile devices
+ * overrides style.css
+ */
+
+@media screen and (max-width:480px)
+{
+    div#content-wrapper
+    {
+        flex-direction: column;
+    }
+
+    section.content
+    {
+        width: 100%;
+        padding: 0 1.5em 1em;
+    }
+
+    section#content-left
+    {
+        height: 90vw;
+
+        background-image: url('../image/icon.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: top;
+        background-position-y: -3vw;
+        background-size: contain;
+    }
+
+    div#name-card
+    {
+        position: absolute;
+        bottom: 1.5em;
+
+        padding: .5em 1em;
+
+        color: white;
+        background: black;
+    }
+
+    section#content-right
+    {
+    }
+}

@@ -1,0 +1,83 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+p,
+span
+{
+    margin: 0;
+}
+
+a
+{
+    font-weight: bold;
+
+    text-decoration: none;
+
+    color: #008500;
+}
+
+ul
+{
+    padding-left: 1em;
+}
+
+li
+{
+    line-height: 1.5em;
+}
+
+body
+{
+    font-family: 'Ropa Sans', sans-serif;
+
+    margin: 0;
+}
+
+/* ------------------ */
+
+div#content-wrapper
+{
+    display: flex;
+
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+section.content
+{
+    position: relative;
+
+    box-sizing: border-box;
+    width: 50%;
+}
+
+h1#name-card__name
+{
+    font-size: 2em;
+}
+
+
+
+h1.heading-title
+{
+    margin: .5em 0;
+    margin-top: 1em;
+}
+
+h1.heading-title::before
+{
+    margin-right: .3em;
+
+    content: '#';
+}
+
+span.employments__duration
+{
+    margin-left: .5em;
+
+    color: gray;
+}
