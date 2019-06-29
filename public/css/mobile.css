@@ -5,6 +5,21 @@
 
 @media screen and (max-width:480px)
 {
+    .fadeIn
+    {
+        transition: all 300ms;
+        transform: translate(0, 10px);
+
+        opacity: 0;
+    }
+
+    .fadeIn.scrollIn
+    {
+        transform: translate(0, 0);
+
+        opacity: 1;
+    }
+
     div#content-wrapper
     {
         flex-direction: column;
@@ -74,7 +89,7 @@
         padding: 0 1.5em 1em;
     }
 
-    h1.heading-title:first-child
+    h1.heading-title
     {
         font-size: 2.2em;
     }
