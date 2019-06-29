@@ -70,7 +70,8 @@
     div#name-card
     {
         position: absolute;
-        bottom: 1.5em;
+        z-index: 2;
+        bottom: -1.5em;
         left: 1.5em;
 
         padding: .5em 1em;
@@ -86,7 +87,7 @@
         overflow: unset;
 
         height: unset;
-        padding: 0 1.5em 1em;
+        padding: 1em 1.5em;
     }
 
     h1.heading-title
