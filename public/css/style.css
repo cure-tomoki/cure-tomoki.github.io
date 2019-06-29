@@ -77,6 +77,24 @@ h1#name-card__name
     font-size: 2em;
 }
 
+section#content-left
+{
+    text-align: center;
+}
+
+img#profile-img
+{
+    max-width: 60%;
+    border: 4px solid black;
+    border-radius: 50%;
+}
+
+section#content-right
+{
+    height: 100vh;
+    overflow: scroll;
+    background-color: white;
+}
 
 
 h1.heading-title
