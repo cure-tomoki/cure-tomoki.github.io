@@ -121,6 +121,8 @@ section#content-right
 
 h1.heading-title
 {
+    font-size: 2em;
+
     margin: .5em 0;
     margin-top: 1em;
 }
@@ -130,11 +132,6 @@ h1.heading-title::before
     margin-right: .3em;
 
     content: '#';
-}
-
-h1.heading-title:first-child
-{
-    font-size: 4em;
 }
 
 span.employments__duration
