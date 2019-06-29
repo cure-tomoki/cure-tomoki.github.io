@@ -6,8 +6,11 @@ h2,
 h3,
 h4,
 p,
-span
+span,
+strong
 {
+    line-height: 1.5em;
+
     margin: 0;
 }
 
@@ -22,7 +25,14 @@ a
 
 ul
 {
+    line-height: 1.5em;
+
     padding-left: 1em;
+}
+
+ul.slash-list
+{
+    padding-left: 0;
 }
 
 ul.slash-list > li
@@ -40,11 +50,6 @@ ul.slash-list > li::after
 ul.slash-list > li:last-child::after
 {
     display: none;
-}
-
-li
-{
-    line-height: 1.5em;
 }
 
 body
