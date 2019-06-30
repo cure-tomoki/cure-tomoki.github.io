@@ -58,12 +58,10 @@
     img#profile-img
     {
         position: fixed;
+        top: -3vw;
 
         width: 100%;
         max-width: unset;
-        /* top: -3vw; */
-
-        transform: scale(1.1);
 
         border: unset;
         border-radius: unset;
