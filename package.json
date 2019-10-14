@@ -1,0 +1,19 @@
+{
+  "name": "tomotetra.github.io",
+  "version": "1.0.0",
+  "main": "src/js/index.js",
+  "repository": "https://github.com/tomotetra/tomotetra.github.io.git",
+  "author": "tomotetra <cure.tomoki@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "build": "gulp build"
+  }
+}
