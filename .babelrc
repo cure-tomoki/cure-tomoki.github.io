@@ -16,5 +16,10 @@
         "corejs": 3
       }
     ]
-  ]
+  ],
+  "env": {
+    "production": {
+      "presets": ["minify"]
+    }
+  }
 }

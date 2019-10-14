@@ -1,0 +1,6 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans&display=swap');
+
+/* styles */
+@import './default';
+@import './mobile';

@@ -11,7 +11,14 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "@babel/register": "^7.6.2",
-    "gulp": "^4.0.2"
+    "autoprefixer": "^9.6.5",
+    "babel-minify": "^0.5.1",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-postcss": "^8.0.0",
+    "postcss-import": "^12.0.1"
   },
   "scripts": {
     "build": "gulp build"
