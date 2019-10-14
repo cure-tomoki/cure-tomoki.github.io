@@ -60,7 +60,7 @@
         position: fixed;
         top: -3vw;
 
-        width: 100%;
+        width: 100vw;
         max-width: unset;
 
         border: unset;
@@ -88,6 +88,22 @@
 
         height: unset;
         padding: 1em 1.5em;
+    }
+    section#content-right::before
+    {
+        position: absolute;
+        top: -15px;
+        left: -10vw;
+
+        display: block;
+
+        width: 120vw;
+        height: 10vh;
+
+        content: '';
+        transform: rotate(-4deg);
+
+        background: white;
     }
 
     h1.heading-title
