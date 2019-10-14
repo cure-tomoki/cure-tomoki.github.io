@@ -92,18 +92,17 @@
     section#content-right::before
     {
         position: absolute;
-        top: -15px;
-        left: -10vw;
+        top: -24px;
+        left: 0;
 
-        display: block;
-
-        width: 120vw;
-        height: 10vh;
+        width: 0;
+        height: 0;
 
         content: '';
-        transform: rotate(-4deg);
 
-        background: white;
+        border-width: 0 0 24px 100vw;
+        border-style: solid;
+        border-color: transparent transparent white transparent;
     }
 
     h1.heading-title
