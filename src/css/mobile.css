@@ -2,7 +2,11 @@
 * stylesheet for mobile devices
 * overrides style.css
 */
-@media screen and (max-width:480px) {
+@media screen and (max-width:960px) {
+  body {
+    flex-direction: column;
+    max-width:  480px;
+  }
   .fadeIn {
     transform: translate(0, 10px);
     opacity: 0;
@@ -12,52 +16,22 @@
     transform: translate(0, 0);
     opacity: 1;
   }
-  div#content-wrapper {
-    flex-direction: column;
-  }
-  section.content {
-    width: 100%;
-    padding: unset;
-  }
-  section#content-left {
-    height: 90vw;
+  aside {
+    position: relative;
+    top: 0;
+    height: 370px;
     text-align: unset;
   }
-  div#profile-wrapper {
-    position: unset;
-    top: unset;
-    transform: unset;
-  }
-  h1#name-card__name {
-    font-size: 2.5em;
-  }
-  span#name-card__description {
-    font-size: 1.2em;
-  }
-  img#profile-img {
-    position: fixed;
-    top: -3vw;
-    width: 100vw;
-    max-width: unset;
-    border: unset;
-    border-radius: unset;
-  }
-  div#name-card {
-    position: absolute;
-    bottom: -1.5em;
-    left: 1.5em;
-    z-index: 2;
-    padding: .5em 1em;
-    color: white;
-    background: black;
-  }
-  section#content-right {
+  main {
+    position: relative;
     z-index: 1;
     height: unset;
+    margin: 0;
     padding: 1em 1.5em;
     overflow: unset;
+    background: white;
   }
-  section#content-right::before {
+  main::before {
     position: absolute;
     top: -24px;
     left: 0;
@@ -68,7 +42,49 @@
     border-width: 0 0 24px 100vw;
     content: '';
   }
+  #profile-wrapper {
+    position: unset;
+    top: unset;
+    transform: unset;
+  }
+  h1#name-card__name {
+    font-size: 2.5em;
+  }
+  span#name-card__description {
+    font-size: 1.2em;
+  }
+  #profile-img {
+    position: fixed;
+    top: -3vw;
+    width: 100%;
+    max-width: 480px;
+    border: unset;
+    border-radius: unset;
+  }
+  #name-card {
+    position: absolute;
+    bottom: -1.5em;
+    left: 1.5em;
+    z-index: 2;
+    padding: .5em 1em;
+    color: white;
+    background: black;
+  }
   h1.heading-title {
     font-size: 2.2em;
+  }
+}
+
+@media screen and (max-width:400px) {
+  aside {
+    height: 90vw;
+  }
+}
+@media screen and (max-width:240px) {
+  aside {
+    height:unset;
+  }
+  #profile-img {
+    display: none;
   }
 }

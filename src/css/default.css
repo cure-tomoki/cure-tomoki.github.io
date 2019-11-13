@@ -31,52 +31,44 @@ ul.slash-list > li:last-child::after {
   display: none;
 }
 body {
-  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  max-width:  960px;
+  margin: 0 auto;
   font-family: 'Ropa Sans', sans-serif;
 }
+aside {
+  position: sticky;
+  top: 48px;
+  left: 0;
+  flex-shrink: 1.6;
+  height: fit-content;
+  text-align: center;
+}
+main {
+  margin-left: 24px;
+}
 /* ------------------ */
-div#content-wrapper {
-  display: flex;
-  max-width: 1024px;
-  margin: 0 auto;
-}
-section.content {
-  position: relative;
-  box-sizing: border-box;
-  width: 50%;
-  padding: 0 32px;
-}
 .noticeCard {
   padding: 16px;
   background: lightgoldenrodyellow;
   border-radius: 8px;
 }
-div#profile-wrapper {
-  position: relative;
-  top: 50%;
-  transform: translateY(-70%);
+#name-card {
+  margin-top: 12px;
 }
-h1#name-card__name {
-  font-size: 3em;
+#name-card__name {
+  font-size: 2.5em;
+  line-height: 1em;
 }
-span#name-card__description {
-  font-size: 1.5em;
+#name-card__description {
+  font-size: 1.2em;
 }
-section#content-left {
-  text-align: center;
-}
-img#profile-img {
-  max-width: 60%;
+#profile-img {
+  max-width: 90%;
   border: 4px solid black;
   border-radius: 50%;
 }
-section#content-right {
-  height: 100vh;
-  padding: 64px 0;
-  overflow: scroll;
-  background-color: white;
-}
-
 h1.heading-title {
   margin: .5em 0;
   margin-top: 1em;
