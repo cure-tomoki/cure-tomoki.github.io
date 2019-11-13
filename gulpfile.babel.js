@@ -3,8 +3,6 @@ import * as gulp from 'gulp';
 const postcss = require('gulp-postcss')
 const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
-const imageminWebp = require('imagemin-webp');
-const rename = require('gulp-rename');
 const plumber = require('gulp-plumber');
 
 // build css
@@ -30,9 +28,8 @@ gulp.task('build:image', (callback) => {
   gulp.src('./src/image/*')
     .pipe(plumber())
     .pipe(imagemin([
-      imageminWebp()
+      imagemin.jpegtran({ progressive: true }),
     ]))
-    .pipe(rename({ extname: '.webp' }))
     .pipe(gulp.dest('./public/image'));
   callback();
 });
