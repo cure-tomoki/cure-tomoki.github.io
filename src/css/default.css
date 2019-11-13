@@ -9,7 +9,7 @@ strong {
   line-height: 1.5em;
 }
 a {
-  color: #008500;
+  color: var(--clr-leafgreen);
   font-weight: bold;
   text-decoration: none;
 }
@@ -33,7 +33,7 @@ ul.slash-list > li:last-child::after {
 body {
   display: flex;
   justify-content: space-between;
-  max-width:  960px;
+  max-width: var(--desktop-width);
   margin: 0 auto;
   font-family: 'Ropa Sans', sans-serif;
 }
@@ -51,7 +51,7 @@ main {
 /* ------------------ */
 .noticeCard {
   padding: 16px;
-  background: lightgoldenrodyellow;
+  background-color: var(--clr-lightgray);
   border-radius: 8px;
 }
 #name-card {
@@ -80,5 +80,5 @@ h1.heading-title::before {
 }
 span.employments__duration {
   margin-left: .5em;
-  color: gray;
+  color: var(--clr-gray);
 }

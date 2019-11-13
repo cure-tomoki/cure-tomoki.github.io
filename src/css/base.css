@@ -1,0 +1,20 @@
+/*
+* base styles
+*/
+
+/* variables */
+:root {
+  /* colors */
+  --clr-white: #ffffff;
+  --clr-lightgray: #D3D3D3;
+  --clr-silver: #C0C0C0;
+  --clr-darkgray: #A9A9A9;
+  --clr-gray:#808080;
+  --clr-dimgray:#696969;
+  --clr-black: #000000;
+  --clr-leafgreen: #008500;
+
+  /* device size */
+  --desktop-width: 960px;
+  --mobile-width: 480px;
+}
