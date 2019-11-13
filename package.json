@@ -17,7 +17,9 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-imagemin": "^6.1.1",
+    "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
+    "npm-run-all": "^4.1.5",
     "postcss-import": "^12.0.1",
     "stylelint": "^11.1.1",
     "stylelint-config-rational-order": "^0.1.2",
@@ -25,6 +27,8 @@
   },
   "scripts": {
     "build": "gulp build",
+    "build:watch": "gulp build watch",
+    "watch": "run-s build:watch",
     "lint:css": "stylelint 'src/**/*.css'"
   }
 }
