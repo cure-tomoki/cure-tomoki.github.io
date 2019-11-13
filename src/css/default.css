@@ -41,7 +41,6 @@ aside {
   position: sticky;
   top: 48px;
   left: 0;
-  flex-shrink: 1.6;
   height: fit-content;
   text-align: center;
 }
