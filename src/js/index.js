@@ -1,21 +1,23 @@
 function fadein(className, offset = 0) {
-  const windowHeight = $(window).height();
-  $(className).each(function(){
-    const elemPos = $(this).offset().top;
-    const scrollTop = $(window).scrollTop();
-    if (scrollTop > elemPos - windowHeight + offset){
-      $(this).addClass('scrollIn');
+  const windowHeight = window.innerHeight;
+  const elements = document.getElementsByClassName(className);
+  for (let i = 0; i < elements.length; i++) {
+    const element = elements[i];
+    const elemPos = element.getBoundingClientRect().top;
+    if (0 > elemPos - windowHeight + offset) {
+      element.classList.add('scrollIn');
     }
-  });
+  }
 }
 
-$(function(){
-  // fade in on load
-  const fadein_class = '.fadeIn';
-  fadein(fadein_class);
+const fadein_class = 'fadeIn';
 
-  // fadein on scroll
-  $(window).scroll(function (){
-    fadein(fadein_class, 100);
-  });
-});
+// fade in on load
+window.onload = function () {
+  fadein(fadein_class);
+};
+
+// fadein on scroll
+window.onscroll = function () {
+  fadein(fadein_class, 100);
+};

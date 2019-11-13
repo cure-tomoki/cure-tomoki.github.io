@@ -79,5 +79,5 @@ h1.heading-title::before {
 }
 span.employments__duration {
   margin-left: .5em;
-  color: var(--clr-gray);
+  color: var(--clr-dimgray);
 }
