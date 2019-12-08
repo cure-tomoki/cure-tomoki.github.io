@@ -3,10 +3,6 @@
 * overrides style.css
 */
 @media screen and (max-width:960px) {
-  body {
-    flex-direction: column;
-    max-width: var(--mobile-width);
-  }
   .fadeIn {
     transform: translate(0, 10px);
     opacity: 0;
@@ -15,6 +11,10 @@
   .fadeIn.scrollIn {
     transform: translate(0, 0);
     opacity: 1;
+  }
+  #content-wrapper  {
+    flex-direction: column;
+    max-width: var(--mobile-width);
   }
   aside {
     position: relative;

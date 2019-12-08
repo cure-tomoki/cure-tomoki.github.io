@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html amp lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>tomotetra</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <meta property="og:url" content="https://tomotetra.github.io/" />
   <meta property="og:type" content="website">
   <meta property="og:title" content="tomotetra">
@@ -20,119 +20,193 @@
   <meta name="twitter:image" content="https://tomotetra.github.io/public/image/icon.jpg" />
 
   <link rel="icon" type="image/ico" href="https://tomotetra.github.io/public/image/favicon.ico">
+  <!-- amp ⚡️ -->
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
+
+    @-webkit-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-moz-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-ms-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-o-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+  </style>
+  <noscript>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none
+      }
+    </style>
+  </noscript>
+  <!-- custom assets -->
   <link rel="stylesheet" href="public/index.css">
   <script async src="public/index.js"></script>
 </head>
 
 <body>
-  <aside>
-    <div id="profile-wrapper">
-      <img src="./public/image/icon.jpg" id="profile-img" alt="profile image" />
-      <div id="name-card">
-        <h1 id="name-card__name">Tomoki Kano</h1>
-        <span id="name-card__description">Frontend Web Developer</span>
+  <div id="content-wrapper">
+    <aside>
+      <div id="profile-wrapper">
+        <amp-img src="./public/image/icon.jpg" id="profile-img" alt="profile image" layout="responsive" width="512"
+          height="512"></amp-img>
+        <div id="name-card">
+          <h1 id="name-card__name">Tomoki Kano</h1>
+          <span id="name-card__description">Frontend Web Developer</span>
+        </div>
       </div>
-    </div>
-  </aside>
+    </aside>
 
-  <main>
-    <!-- ABOUT -->
-    <section class="fadeIn" id="hello">
-      <h1 class="heading-title">Hello 👋</h1>
-      <strong>My name is Tomoki Kano,</strong>
-      <p>
-        a design-minded frontend web software developer based in Tokyo, Japan.
-        I focus on building high-performing / accessible web applications with beautiful UIs and astonishing UXs.
-      </p>
-    </section>
+    <main>
+      <!-- ABOUT -->
+      <section class="fadeIn" id="hello">
+        <h1 class="heading-title">Hello 👋</h1>
+        <strong>My name is Tomoki Kano,</strong>
+        <p>
+          a design-minded frontend web software developer based in Tokyo, Japan.
+          I focus on building high-performing / accessible web applications with beautiful UIs and astonishing UXs.
+        </p>
+      </section>
 
-    <!-- EMPLOYMENTS -->
-    <section class="fadeIn" id="employments">
-      <h1 class="heading-title">Employments</h1>
-      <ul>
-        <li>Engineer at <a href="https://corp.activo.jp/" target="blank">activo Inc.</a>
-          <span class="employments__duration">(2016.08-2018.07)</span>
-        </li>
+      <!-- EMPLOYMENTS -->
+      <section class="fadeIn" id="employments">
+        <h1 class="heading-title">Employments</h1>
         <ul>
-          <li>Worked on renewal of <a href="https://activo.jp/" target="blank">activo.jp</a>.</li>
+          <li>Engineer at <a href="https://corp.activo.jp/" target="blank">activo Inc.</a>
+            <span class="employments__duration">(2016.08-2018.07)</span>
+          </li>
+          <ul>
+            <li>Worked on renewal of <a href="https://activo.jp/" target="blank">activo.jp</a>.</li>
+          </ul>
+          <li>Intern at <a href="https://voyagegroup.com/" target="blank">VOYAGE GROUP Inc.</a>
+            <span class="employments__duration">(2017.08)</span>
+          </li>
+          <li>Intern at <a href="https://www.a-tm.co.jp/" target="blank">Ateam Inc.</a>
+            <span class="employments__duration">(2017.08)</span>
+          </li>
+          <li>Intern at <a href="https://www.cyberagent.co.jp/" target="blank">CyberAgent Inc.</a>
+            <span class="employments__duration">(2017.08-10)</span>
+          </li>
+          <li>Engineer at <a href="https://pixta.co.jp/company" target="blank">PIXTA Inc.</a>
+            <span class="employments__duration">(2018.07-2019.09)</span>
+          </li>
+          <ul>
+            <li>Started up <a href="https://mecelo.com/" target="blank">mecelo.com</a>. Worked fullstack.</li>
+          </ul>
+          <li>Engineer at <a href="https://www.cyberagent.co.jp/" target="blank">CyberAgent Inc.</a>
+            <span class="employments__duration">(2019.04-now)</span>
+          </li>
+          <ul>
+            <li>Working on the frontend of <a href="https://ameblo.jp/" target="blank">Ameba Blog</a>.</li>
+          </ul>
         </ul>
-        <li>Intern at <a href="https://voyagegroup.com/" target="blank">VOYAGE GROUP Inc.</a>
-          <span class="employments__duration">(2017.08)</span>
-        </li>
-        <li>Intern at <a href="https://www.a-tm.co.jp/" target="blank">Ateam Inc.</a>
-          <span class="employments__duration">(2017.08)</span>
-        </li>
-        <li>Intern at <a href="https://www.cyberagent.co.jp/" target="blank">CyberAgent Inc.</a>
-          <span class="employments__duration">(2017.08-10)</span>
-        </li>
-        <li>Engineer at <a href="https://pixta.co.jp/company" target="blank">PIXTA Inc.</a>
-          <span class="employments__duration">(2018.07-2019.09)</span>
-        </li>
+      </section>
+
+      <section class="fadeIn noticeCard" id="openForJobs">
+        <h1>Looking for a web developer?</h1>
+        <p>I am currently open for a part-time job. If your project needs a helping hand with building, designing,
+          or some technical consultation in general, I might be the one to fit the position. Please feel free to contact
+          me via <a href="#contacts">twitter or email</a>, and maybe we'll talk over a cup of coffee! ☕️</p>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="fadeIn" id="skills">
+        <h1 class="heading-title">Skills</h1>
+        <ul class="slash-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>SCSS</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>ReactJS</li>
+          <li>VueJS</li>
+          <li>Node.js</li>
+          <li>Go</li>
+          <li>Ruby</li>
+          <li>Ruby on Rails</li>
+          <li>Linux</li>
+          <li>git</li>
+          <li>Docker</li>
+          <li>MySQL</li>
+          <li>and more</li>
+        </ul>
+      </section>
+
+      <!-- HOBBIES -->
+      <section class="fadeIn" id="hobbies">
+        <h1 class="heading-title">Hobbies</h1>
         <ul>
-          <li>Started up <a href="https://mecelo.com/" target="blank">mecelo.com</a>. Worked fullstack.</li>
+          <li>Photography 📷</li>
+          <li>Mountaineering ⛰</li>
+          <li>Whisky 🥃</li>
+          <li>Anime 📺</li>
         </ul>
-        <li>Engineer at <a href="https://www.cyberagent.co.jp/" target="blank">CyberAgent Inc.</a>
-          <span class="employments__duration">(2019.04-now)</span>
-        </li>
+      </section>
+
+      <!-- CONTACTS -->
+      <section class="fadeIn" id="contacts">
+        <h1 class="heading-title">Get in Touch</h1>
         <ul>
-          <li>Working on the frontend of <a href="https://ameblo.jp/" target="blank">Ameba Blog</a>.</li>
+          <li>Twitter: <a href="https://twitter.com/cure_tomoki" target="blank">@cure_tomoki</a> ← Follow me!</li>
+          <li>GitHub: <a href="https://github.com/tomotetra" target="blank">tomotetra</a></li>
+          <li>Facebook: <a href="https://www.facebook.com/tomoki.kano.9" target="blank">Tomoki Kano</a></li>
+          <li>Instagram: <a href="https://www.instagram.com/tomoki_kano/" targte="blank">tomoki_kano</a></li>
+          <li>Email: <a href="mailto:kano_tomoki@cyberagent.co.jp">kano_tomoki@cyberagent.co.jp</a></li>
         </ul>
-      </ul>
-    </section>
-
-    <section class="fadeIn noticeCard" id="openForJobs">
-      <h1>Looking for a web developer?</h1>
-      <p>I am currently open for a part-time job. If your project needs a helping hand with building, designing,
-        or some technical consultation in general, I might be the one to fit the position. Please feel free to contact
-        me via <a href="#contacts">twitter or email</a>, and maybe we'll talk over a cup of coffee! ☕️</p>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="fadeIn" id="skills">
-      <h1 class="heading-title">Skills</h1>
-      <ul class="slash-list">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>SCSS</li>
-        <li>JavaScript</li>
-        <li>TypeScript</li>
-        <li>ReactJS</li>
-        <li>VueJS</li>
-        <li>Node.js</li>
-        <li>Go</li>
-        <li>Ruby</li>
-        <li>Ruby on Rails</li>
-        <li>Linux</li>
-        <li>git</li>
-        <li>Docker</li>
-        <li>MySQL</li>
-        <li>and more</li>
-      </ul>
-    </section>
-
-    <!-- HOBBIES -->
-    <section class="fadeIn" id="hobbies">
-      <h1 class="heading-title">Hobbies</h1>
-      <ul>
-        <li>Photography 📷</li>
-        <li>Mountaineering ⛰</li>
-        <li>Whisky 🥃</li>
-        <li>Anime 📺</li>
-      </ul>
-    </section>
-
-    <!-- CONTACTS -->
-    <section class="fadeIn" id="contacts">
-      <h1 class="heading-title">Get in Touch</h1>
-      <ul>
-        <li>Twitter: <a href="https://twitter.com/cure_tomoki" target="blank">@cure_tomoki</a> ← Follow me!</li>
-        <li>GitHub: <a href="https://github.com/tomotetra" target="blank">tomotetra</a></li>
-        <li>Facebook: <a href="https://www.facebook.com/tomoki.kano.9" target="blank">Tomoki Kano</a></li>
-        <li>Instagram: <a href="https://www.instagram.com/tomoki_kano/" targte="blank">tomoki_kano</a></li>
-        <li>Email: <a href="mailto:kano_tomoki@cyberagent.co.jp">kano_tomoki@cyberagent.co.jp</a></li>
-      </ul>
-    </section>
-  </main>
+      </section>
+    </main>
+  </div>
 </body>
 
 </html>

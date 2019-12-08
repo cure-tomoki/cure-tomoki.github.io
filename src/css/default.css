@@ -30,7 +30,7 @@ ul.slash-list > li::after {
 ul.slash-list > li:last-child::after {
   display: none;
 }
-body {
+#content-wrapper {
   display: flex;
   justify-content: space-between;
   max-width: var(--desktop-width);
@@ -41,13 +41,13 @@ aside {
   position: sticky;
   top: 48px;
   left: 0;
+  width: 50%;
   height: fit-content;
   text-align: center;
 }
 main {
-  margin-left: 24px;
+  margin-left: 48px;
 }
-/* ------------------ */
 .noticeCard {
   padding: 16px;
   background-color: var(--clr-lightgray);
@@ -64,7 +64,6 @@ main {
   font-size: 1.2em;
 }
 #profile-img {
-  max-width: 90%;
   border: 4px solid black;
   border-radius: 50%;
 }
