@@ -1,15 +1,20 @@
+body {
+  background: var(--thm-primary-bg);
+}
 h1,
 h2,
 h3,
 h4,
 p,
+li,
 span,
 strong {
   margin: 0;
+  color: var(--thm-primary-text);
   line-height: 1.5em;
 }
 a {
-  color: var(--clr-leafgreen);
+  color: var(--thm-highlight-text);
   font-weight: bold;
   text-decoration: none;
 }
@@ -50,7 +55,7 @@ main {
 }
 .noticeCard {
   padding: 16px;
-  background-color: var(--clr-lightgray);
+  background-color: var(--thm-secondary-bg);
   border-radius: 8px;
 }
 #name-card {
@@ -64,7 +69,7 @@ main {
   font-size: 1.2em;
 }
 #profile-img {
-  border: 4px solid black;
+  border: 4px solid var(--thm-inverted-bg);
   border-radius: 50%;
 }
 h1.heading-title {
@@ -78,5 +83,5 @@ h1.heading-title::before {
 }
 span.employments__duration {
   margin-left: .5em;
-  color: var(--clr-dimgray);
+  color: var(--thm-secondary-text);
 }

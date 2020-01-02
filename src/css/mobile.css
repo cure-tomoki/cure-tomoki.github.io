@@ -29,7 +29,7 @@
     margin: 0;
     padding: 1em 1.5em;
     overflow: unset;
-    background: var(--clr-white);
+    background: var(--thm-primary-bg);
   }
   main::before {
     position: absolute;
@@ -37,7 +37,7 @@
     left: 0;
     width: 0;
     height: 0;
-    border-color: transparent transparent var(--clr-white) transparent;
+    border-color: transparent transparent var(--thm-primary-bg) transparent;
     border-style: solid;
     border-width: 0 0 24px 100vw;
     content: '';
@@ -67,8 +67,13 @@
     left: 1.5em;
     z-index: 2;
     padding: .5em 1em;
-    color: var(--clr-white);
-    background: black;
+    background: var(--thm-inverted-bg);
+  }
+  #name-card__name {
+    color: var(--thm-inverted-text);
+  }
+  #name-card__description {
+    color: var(--thm-inverted-text);
   }
   h1.heading-title {
     font-size: 2.2em;

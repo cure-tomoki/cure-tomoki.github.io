@@ -4,6 +4,9 @@
 /* base */
 @import './base';
 
+/* color scheme */
+@import './color_scheme';
+
 /* styles */
-@import './default';
+@import './desktop';
 @import './mobile';
