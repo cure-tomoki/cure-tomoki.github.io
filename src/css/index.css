@@ -1,6 +1,9 @@
 /* google fonts */
 @import url('https://fonts.googleapis.com/css?family=Ropa+Sans&display=swap');
 
+/* @node/reset-css */
+@import 'reset-css';
+
 /* base */
 @import './base';
 

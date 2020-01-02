@@ -1,27 +1,6 @@
 body {
   background: var(--thm-primary-bg);
 }
-h1,
-h2,
-h3,
-h4,
-p,
-li,
-span,
-strong {
-  margin: 0;
-  color: var(--thm-primary-text);
-  line-height: 1.5em;
-}
-a {
-  color: var(--thm-highlight-text);
-  font-weight: bold;
-  text-decoration: none;
-}
-ul {
-  padding-left: 1em;
-  line-height: 1.5em;
-}
 ul.slash-list {
   padding-left: 0;
 }
@@ -57,6 +36,9 @@ main {
   padding: 16px;
   background-color: var(--thm-secondary-bg);
   border-radius: 8px;
+}
+#openForJobs__title {
+  font-size: 1.5em;
 }
 #name-card {
   margin-top: 12px;

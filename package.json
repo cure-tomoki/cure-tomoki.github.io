@@ -5,7 +5,9 @@
   "repository": "https://github.com/tomotetra/tomotetra.github.io.git",
   "author": "tomotetra <cure.tomoki@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "reset-css": "^5.0.1"
+  },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",

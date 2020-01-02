@@ -20,3 +20,20 @@
   --desktop-width: 960px;
   --mobile-width: 480px;
 }
+
+h1, h2, h3, h4, h5, h6, p, li, span, strong {
+  color: var(--thm-primary-text);
+  line-height: 1.5em;
+}
+a {
+  color: var(--thm-highlight-text);
+  font-weight: bold;
+  text-decoration: none;
+}
+ul {
+  padding-left: 1em;
+  line-height: 1.5em;
+}
+section {
+  margin: 16px 0;
+}
