@@ -33,6 +33,7 @@ a {
 ul {
   padding-left: 1em;
   line-height: 1.5em;
+  list-style: disc;
 }
 section {
   margin: 16px 0;
