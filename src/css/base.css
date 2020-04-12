@@ -38,3 +38,8 @@ ul {
 section {
   margin: 16px 0;
 }
+
+/* accessibility */
+*:focus {
+  outline: var(--thm-highlight-text) solid 2px;
+}
