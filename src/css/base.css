@@ -6,11 +6,11 @@
 :root {
   /* colors */
   --clr-white: #ffffff;
-  --clr-lightgray: #D3D3D3;
-  --clr-silver: #C0C0C0;
-  --clr-darkgray: #A9A9A9;
-  --clr-gray:#808080;
-  --clr-dimgray:#696969;
+  --clr-lightgray: #d3d3d3;
+  --clr-silver: #c0c0c0;
+  --clr-darkgray: #a9a9a9;
+  --clr-gray: #808080;
+  --clr-dimgray: #696969;
   --clr-almostblack: #232323;
   --clr-black: #000000;
   --clr-lightgreen: #82be28;
@@ -21,7 +21,16 @@
   --mobile-width: 480px;
 }
 
-h1, h2, h3, h4, h5, h6, p, li, span, strong {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+span,
+strong {
   color: var(--thm-primary-text);
   line-height: 1.5em;
 }

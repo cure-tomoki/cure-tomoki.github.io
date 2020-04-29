@@ -1,15 +1,15 @@
 /* google fonts */
-@import url('https://fonts.googleapis.com/css?family=Ropa+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Ropa+Sans&display=swap");
 
 /* @node/reset-css */
-@import 'reset-css';
+@import "reset-css";
 
 /* base */
-@import './base';
+@import "./base";
 
 /* color scheme */
-@import './color_scheme';
+@import "./color_scheme";
 
 /* styles */
-@import './desktop';
-@import './mobile';
+@import "./desktop";
+@import "./mobile";

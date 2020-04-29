@@ -2,7 +2,7 @@
 * stylesheet for mobile devices
 * overrides style.css
 */
-@media screen and (max-width:960px) {
+@media screen and (max-width: 960px) {
   .fadeIn {
     transform: translate(0, 10px);
     opacity: 0;
@@ -12,7 +12,7 @@
     transform: translate(0, 0);
     opacity: 1;
   }
-  #content-wrapper  {
+  #content-wrapper {
     flex-direction: column;
     max-width: var(--mobile-width);
   }
@@ -40,7 +40,7 @@
     border-color: transparent transparent var(--thm-primary-bg) transparent;
     border-style: solid;
     border-width: 0 0 24px 100vw;
-    content: '';
+    content: "";
   }
   #profile-wrapper {
     position: unset;
@@ -66,7 +66,7 @@
     bottom: -1.5em;
     left: 1.5em;
     z-index: 2;
-    padding: .5em 1em;
+    padding: 0.5em 1em;
     background: var(--thm-secondary-bg);
   }
   #name-card__name {
@@ -80,14 +80,14 @@
   }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width: 400px) {
   aside {
     height: 90vw;
   }
 }
-@media screen and (max-width:240px) {
+@media screen and (max-width: 240px) {
   aside {
-    height:unset;
+    height: unset;
   }
   #profile-img {
     display: none;

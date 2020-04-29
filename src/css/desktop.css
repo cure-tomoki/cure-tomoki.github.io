@@ -8,8 +8,8 @@ ul.slash-list > li {
   display: inline-block;
 }
 ul.slash-list > li::after {
-  margin: 0 .3em;
-  content: '/';
+  margin: 0 0.3em;
+  content: "/";
 }
 ul.slash-list > li:last-child::after {
   display: none;
@@ -19,7 +19,7 @@ ul.slash-list > li:last-child::after {
   justify-content: space-between;
   max-width: var(--desktop-width);
   margin: 0 auto;
-  font-family: 'Ropa Sans', sans-serif;
+  font-family: "Ropa Sans", sans-serif;
 }
 aside {
   position: sticky;
@@ -55,15 +55,15 @@ main {
   border-radius: 50%;
 }
 h1.heading-title {
-  margin: .5em 0;
+  margin: 0.5em 0;
   margin-top: 1em;
   font-size: 2em;
 }
 h1.heading-title::before {
-  margin-right: .3em;
-  content: '#';
+  margin-right: 0.3em;
+  content: "#";
 }
 span.employments__duration {
-  margin-left: .5em;
+  margin-left: 0.5em;
   color: var(--thm-secondary-text);
 }
