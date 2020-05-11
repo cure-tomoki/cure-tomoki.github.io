@@ -35,6 +35,7 @@ strong {
   line-height: 1.5em;
 }
 a {
+  padding: 0 2px;
   color: var(--thm-highlight-text);
   font-weight: bold;
   text-decoration: none;
@@ -51,4 +52,6 @@ section {
 /* accessibility */
 *:focus {
   outline: var(--thm-highlight-text) solid 2px;
+  color: var(--thm-primary-bg);
+  background: var(--thm-highlight-text);
 }

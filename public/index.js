@@ -1,7 +1,7 @@
 "use strict";
 
 // fade in sections
-var fadein_class = 'fadeIn';
+var fadein_class = "fadeIn";
 
 function fadein(className) {
   var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
@@ -13,7 +13,7 @@ function fadein(className) {
     var elemPos = element.getBoundingClientRect().top;
 
     if (0 > elemPos - windowHeight + offset) {
-      element.classList.add('scrollIn');
+      element.classList.add("scrollIn");
     }
   }
 } // fade in on load
@@ -29,9 +29,9 @@ window.onscroll = function () {
 };
 
 document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-  anchor.addEventListener('click', function (e) {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
-    var href = this.getAttribute('href');
+    var href = this.getAttribute("href");
     var target = document.querySelector(href);
     if (!target) return;
     target.scrollIntoView();
