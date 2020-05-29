@@ -30,7 +30,7 @@ gulp.task("build:image", (callback) => {
   gulp
     .src("./src/image/*")
     .pipe(plumber())
-    .pipe(imagemin([imagemin.jpegtran({ progressive: true })]))
+    .pipe(imagemin([imagemin.mozjpeg({ quality: 75, progressive: true })]))
     .pipe(gulp.dest("./public/image"));
   callback();
 });
