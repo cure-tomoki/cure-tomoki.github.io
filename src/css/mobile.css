@@ -40,7 +40,7 @@
     border-color: transparent transparent var(--thm-primary-bg) transparent;
     border-style: solid;
     border-width: 0 0 24px 100vw;
-    content: "";
+    content: '';
   }
   #profile-wrapper {
     position: unset;

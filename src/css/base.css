@@ -51,7 +51,7 @@ section {
 
 /* accessibility */
 *:focus {
-  outline: var(--thm-highlight-text) solid 2px;
   color: var(--thm-primary-bg);
   background: var(--thm-highlight-text);
+  outline: var(--thm-highlight-text) solid 2px;
 }

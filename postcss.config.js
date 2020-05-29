@@ -1,7 +1,7 @@
-const postcssImport = require("postcss-import");
-const cssnano = require("cssnano");
-const autoprefixer = require("autoprefixer");
-const postcssCustomProperties = require("postcss-custom-properties");
+const autoprefixer = require('autoprefixer')
+const cssnano = require('cssnano')
+const postcssCustomProperties = require('postcss-custom-properties')
+const postcssImport = require('postcss-import')
 
 module.exports = {
   plugins: [
@@ -9,7 +9,7 @@ module.exports = {
     autoprefixer(),
     postcssCustomProperties(),
     cssnano({
-      preset: ["default", { discardComments: { removeAll: true } }],
+      preset: ['default', { discardComments: { removeAll: true } }],
     }),
   ],
-};
+}
