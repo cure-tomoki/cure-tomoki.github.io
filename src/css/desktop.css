@@ -9,7 +9,7 @@ ul.slash-list > li {
 }
 ul.slash-list > li::after {
   margin: 0 0.3em;
-  content: "/";
+  content: '/';
 }
 ul.slash-list > li:last-child::after {
   display: none;
@@ -19,7 +19,7 @@ ul.slash-list > li:last-child::after {
   justify-content: space-between;
   max-width: var(--desktop-width);
   margin: 0 auto;
-  font-family: "Ropa Sans", sans-serif;
+  font-family: 'Ropa Sans', sans-serif;
 }
 aside {
   position: sticky;
@@ -31,14 +31,6 @@ aside {
 }
 main {
   margin-left: 60px;
-}
-.noticeCard {
-  padding: 16px;
-  background-color: var(--thm-secondary-bg);
-  border-radius: 8px;
-}
-#openForJobs__title {
-  font-size: 1.5em;
 }
 #name-card {
   margin-top: 12px;
@@ -61,7 +53,7 @@ h1.heading-title {
 }
 h1.heading-title::before {
   margin-right: 0.3em;
-  content: "#";
+  content: '#';
 }
 span.employments__duration {
   margin-left: 0.5em;
