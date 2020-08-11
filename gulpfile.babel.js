@@ -5,12 +5,14 @@ const imagemin = require('gulp-imagemin')
 const plumber = require('gulp-plumber')
 const postcss = require('gulp-postcss')
 
+const BUILD_DIR = './build'
+
 // build html
 gulp.task('build:html', (callback) => {
   gulp
     .src('./index.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('./build'))
+    .pipe(gulp.dest(BUILD_DIR))
   callback()
 })
 
@@ -20,7 +22,7 @@ gulp.task('build:css', (callback) => {
     .src('./src/css/index.css')
     .pipe(plumber())
     .pipe(postcss())
-    .pipe(gulp.dest('./build/public'))
+    .pipe(gulp.dest(BUILD_DIR))
   callback()
 })
 
@@ -30,7 +32,7 @@ gulp.task('build:js', (callback) => {
     .src('./src/js/index.js')
     .pipe(plumber())
     .pipe(babel())
-    .pipe(gulp.dest('./build/public'))
+    .pipe(gulp.dest(BUILD_DIR))
   callback()
 })
 
@@ -40,7 +42,7 @@ gulp.task('build:image', (callback) => {
     .src('./src/image/*')
     .pipe(plumber())
     .pipe(imagemin([imagemin.mozjpeg({ quality: 75, progressive: true })]))
-    .pipe(gulp.dest('./build/public/image'))
+    .pipe(gulp.dest(BUILD_DIR))
   callback()
 })
 
