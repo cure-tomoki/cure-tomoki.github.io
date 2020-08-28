@@ -40,7 +40,11 @@
         "allowShortCircuit": true
       }
     ],
-    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error", {
+        "argsIgnorePattern": "^_",
+      }
+    ],
     "no-shadow": "error"
   }
 }
