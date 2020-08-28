@@ -16,8 +16,6 @@ jobs:
 
       - name: checkout
         uses: actions/checkout@v2
-        with:
-          persist-credentials: false
 
       - name: install dependencies
         run: yarn install
@@ -44,6 +42,11 @@ jobs:
       - name: set environment variables
         run: |
           echo "::set-env name=OUT_DIR::build"
+
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
 
       - name: download artifacts
         uses: actions/download-artifact@v2
