@@ -38,7 +38,7 @@
   "scripts": {
     "build": "next build && next export -o dist",
     "dev": "next dev",
-    "lint": "run-p lint:tsc lint:eslint",
+    "test": "run-p lint:tsc lint:eslint",
     "lint:tsc": "tsc --noEmit",
     "lint:eslint": "eslint --ext .ts,.tsx,.js --cache src"
   }
