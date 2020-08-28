@@ -52,6 +52,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: buid-artifacts
+          path: ${{ env.OUT_DIR }}
 
       - name: publish
         uses: JamesIves/github-pages-deploy-action@releases/v3
