@@ -43,6 +43,7 @@
     "build": "gulp build",
     "build:watch": "gulp build watch",
     "dev": "run-s build build:watch",
+    "test": "run-p lint:js lint:css",
     "lint:js": "eslint --ext .js,.jsx,.ts,.tsx src",
     "lint:css": "stylelint 'src/**/*.css'"
   }
