@@ -9,6 +9,7 @@
     "node": "12.x"
   },
   "dependencies": {
+    "lodash": "^4.17.20",
     "next": "^9.5.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -21,6 +22,7 @@
     "@types/styled-components": "^5.1.2",
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/parser": "^3.10.1",
+    "babel-plugin-styled-components": "^1.11.1",
     "core-js": "^3.6.5",
     "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
@@ -30,6 +32,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
     "eslint-plugin-standard": "^4.0.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.1",
