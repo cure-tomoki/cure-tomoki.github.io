@@ -24,9 +24,7 @@ jobs:
         run: yarn test
 
       - name: production build
-        run: |
-          yarn build
-          touch ${{ env.OUT_DIR }}/.nojekyll
+        run: yarn build
 
       - name: upload artifacts
         uses: actions/upload-artifact@v2
