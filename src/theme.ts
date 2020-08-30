@@ -2,7 +2,7 @@ export const TABLET_MAX_WIDTH = 768;
 export const SP_MAX_WIDTH = 480;
 
 const SPACING_BASE = 8;
-const RADIUS_BASE = 4;
+const RADIUS_BASE = 8;
 
 export type Theme = 'light' | 'dark';
 
@@ -81,17 +81,19 @@ const createTheme = (theme: Theme) => {
 
     // spacing
     spacing: {
-      half: SPACING_BASE / 2, // 4px
-      normal: SPACING_BASE, // 8px
-      double: SPACING_BASE * 2, // 16px
-      triple: SPACING_BASE * 3, // 24px
-      quadruple: SPACING_BASE * 4, // 32px
+      quarter: SPACING_BASE / 4,
+      half: SPACING_BASE / 2,
+      normal: SPACING_BASE,
+      double: SPACING_BASE * 2,
+      triple: SPACING_BASE * 3,
+      quadruple: SPACING_BASE * 4,
     } as const,
 
     // border-radius
     radius: {
       normal: RADIUS_BASE,
       double: RADIUS_BASE * 2,
+      quadruple: RADIUS_BASE * 4,
       round: RADIUS_BASE * 1000,
     } as const,
 
