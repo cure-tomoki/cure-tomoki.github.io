@@ -72,6 +72,11 @@ const PageTemplate: React.FC<Props> = (props) => {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
+        {/* customFont */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <Reset />
       <ThemeProvider theme={theme}>
@@ -91,6 +96,10 @@ const PageTemplate: React.FC<Props> = (props) => {
 const Global = createGlobalStyle(({ theme }) => ({
   body: {
     backgroundColor: theme.color.background,
+    color: theme.color.onBackground,
+    lineHeight: 1.5,
+    fontSize: theme.fontSize.xs,
+    fontFamily: `"${theme.fontFamily.default}","Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif`,
   },
 }));
 

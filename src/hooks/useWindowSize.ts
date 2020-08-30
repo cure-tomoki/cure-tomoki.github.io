@@ -1,6 +1,8 @@
 import throttle from 'lodash/throttle';
 import * as React from 'react';
 
+import { TABLET_MAX_WIDTH, SP_MAX_WIDTH } from '~/theme';
+
 interface Dimentions {
   width: number;
   height: number;
@@ -11,6 +13,8 @@ const useWindowSize = () => {
     width: 200,
     height: 800,
   });
+  const [isSP, setIsSP] = React.useState(true);
+  const [isTablet, setIsTablet] = React.useState(false);
 
   React.useEffect(() => {
     const handleWindowResize = throttle(() => {
@@ -28,7 +32,17 @@ const useWindowSize = () => {
     return () => window.removeEventListener('resize', handleWindowResize);
   }, []);
 
-  return dimentions;
+  React.useEffect(() => {
+    setIsSP(dimentions.width < SP_MAX_WIDTH);
+    setIsTablet(dimentions.width < TABLET_MAX_WIDTH);
+  }, [dimentions.width]);
+
+  return {
+    width: dimentions.width,
+    height: dimentions.height,
+    isSP,
+    isTablet,
+  };
 };
 
 export default useWindowSize;

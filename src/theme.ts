@@ -1,7 +1,23 @@
-export type Theme = 'light' | 'dark';
+export const TABLET_MAX_WIDTH = 768;
+export const SP_MAX_WIDTH = 480;
 
 const SPACING_BASE = 8;
 const RADIUS_BASE = 4;
+
+export type Theme = 'light' | 'dark';
+
+// material design'd dark theme anatomy
+// @see https://material.io/design/color/dark-theme.html#anatomy
+interface SemanticTheme {
+  background: string;
+  onBackground: string;
+  surface: string;
+  onSurface: string;
+  primary: string;
+  onPrimary: string;
+  secondary: string;
+  onSecondary: string;
+}
 
 const palette = {
   // desaturated
@@ -17,21 +33,9 @@ const palette = {
   white: '#ffffff',
   // saturated
   lightBlue: '#0088e1',
+  dimBlue: '#015f9c',
   marigold: '#eca73c',
 } as const;
-
-// material design'd dark theme anatomy
-// @see https://material.io/design/color/dark-theme.html#anatomy
-interface SemanticTheme {
-  background: string;
-  onBackground: string;
-  surface: string;
-  onSurface: string;
-  primary: string;
-  onPrimary: string;
-  secondary: string;
-  onSecondary: string;
-}
 
 const createTheme = (theme: Theme) => {
   const semanticTheme: SemanticTheme =
@@ -53,7 +57,7 @@ const createTheme = (theme: Theme) => {
           onBackground: palette.whitesmoke,
           surface: palette.darkgray,
           onSurface: palette.white,
-          primary: palette.lightBlue,
+          primary: palette.dimBlue,
           onPrimary: palette.darkgray,
           secondary: palette.marigold,
           onSecondary: palette.darkgray,
@@ -61,8 +65,19 @@ const createTheme = (theme: Theme) => {
   const color = { ...palette, ...semanticTheme };
 
   return {
+    // constants
+    constant: {
+      maxContentWidth: '50rem',
+    },
+
     // color
     color,
+
+    // media
+    media: {
+      tablet: `@media (max-width: ${TABLET_MAX_WIDTH}px)`,
+      sp: `@media (max-width: ${SP_MAX_WIDTH}px)`,
+    },
 
     // spacing
     spacing: {
@@ -82,7 +97,7 @@ const createTheme = (theme: Theme) => {
 
     // font-family
     fontFamily: {
-      default: 'unset',
+      default: 'Spinnaker',
       monospaced: 'Andale Mono, Courier New, Lucida Console',
     } as const,
 

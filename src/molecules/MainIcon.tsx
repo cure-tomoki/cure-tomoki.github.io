@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Picture from '~/atoms/Picture';
 
 interface Props {
-  size?: number | string;
+  size?: number;
 }
 
 const MainIcon: React.FC<Props> = ({ size = 256 }) => {
