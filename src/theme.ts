@@ -16,7 +16,7 @@ const palette = {
   whitesmoke: '#f8f8f8',
   white: '#ffffff',
   // saturated
-  lightBlue: '#1388dc',
+  lightBlue: '#0088e1',
   marigold: '#eca73c',
 } as const;
 
@@ -77,7 +77,7 @@ const createTheme = (theme: Theme) => {
     radius: {
       normal: RADIUS_BASE,
       double: RADIUS_BASE * 2,
-      round: RADIUS_BASE * 100,
+      round: RADIUS_BASE * 1000,
     } as const,
 
     // font-family

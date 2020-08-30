@@ -11,7 +11,7 @@ interface Props {
   children?: React.ReactNode;
 }
 
-const Index: React.FC<Props> = (props) => {
+const PageTemplate: React.FC<Props> = (props) => {
   const { theme, themeName, toggleTheme } = useTheme();
   return (
     <>
@@ -55,4 +55,4 @@ const ThemeButton = styled.button(({ theme }) => ({
   margin: theme.spacing.normal,
 }));
 
-export default Index;
+export default PageTemplate;
