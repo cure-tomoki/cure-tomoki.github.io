@@ -15,11 +15,13 @@ const _Link = styled.a(({ theme }) => ({
   color: theme.color.primary,
   fontWeight: 'bold',
   textDecoration: 'none',
-  '&:hover': {
-    opacity: 0.8,
-  },
+  transition: '.3s',
   '&:visited': {
-    color: theme.color.lightBlue,
+    color: theme.color.primary,
+  },
+  '&:hover': {
+    transition: '.3s',
+    color: theme.color.primaryLight,
   },
 }));
 

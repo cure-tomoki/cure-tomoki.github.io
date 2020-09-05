@@ -15,6 +15,7 @@ interface SemanticTheme {
   onSurface: string;
   onSurfaceDim: string;
   primary: string;
+  primaryLight: string;
   onPrimary: string;
   secondary: string;
   onSecondary: string;
@@ -33,8 +34,9 @@ const palette = {
   whitesmoke: '#f8f8f8',
   white: '#ffffff',
   // saturated
-  lightBlue: '#0088e1',
-  dimBlue: '#007dce',
+  lightBlue: '#0096FA',
+  blue: '#0088E1',
+  dimBlue: '#0077C7',
   marigold: '#eca73c',
 };
 
@@ -48,7 +50,8 @@ const createTheme = (theme: Theme) => {
           surface: palette.whitesmoke,
           onSurface: palette.darkgray,
           onSurfaceDim: palette.darksilver,
-          primary: palette.lightBlue,
+          primary: palette.blue,
+          primaryLight: palette.lightBlue,
           onPrimary: palette.white,
           secondary: palette.marigold,
           onSecondary: palette.white,
@@ -61,7 +64,8 @@ const createTheme = (theme: Theme) => {
           onSurface: palette.white,
           onSurfaceDim: palette.dimsilver,
           primary: palette.dimBlue,
-          onPrimary: palette.darkgray,
+          primaryLight: palette.blue,
+          onPrimary: palette.white,
           secondary: palette.marigold,
           onSecondary: palette.darkgray,
         };

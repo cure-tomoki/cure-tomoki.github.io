@@ -23,6 +23,7 @@ const MainIcon: React.FC<Props> = ({ size = 256 }) => {
           type: 'image/png',
         },
       ]}
+      style={{ width: size, height: size }}
     />
   );
 };

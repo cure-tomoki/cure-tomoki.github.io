@@ -81,6 +81,9 @@ const ContactLink = styled(Link)(({ theme }) => ({
   '&:visited': {
     color: theme.color.onSurface,
   },
+  '&:hover': {
+    color: theme.color.primaryLight,
+  },
 }));
 
 const AccountName = styled.span(({ theme }) => ({
