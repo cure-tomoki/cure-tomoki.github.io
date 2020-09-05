@@ -33,7 +33,7 @@ const palette = {
   white: '#ffffff',
   // saturated
   lightBlue: '#0088e1',
-  dimBlue: '#015f9c',
+  dimBlue: '#007dce',
   marigold: '#eca73c',
 } as const;
 

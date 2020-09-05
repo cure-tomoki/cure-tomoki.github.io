@@ -13,3 +13,19 @@ type AtLeastRec<Num, Elm, T extends unknown[], C extends unknown[]> = {
 // array length
 // @see https://qiita.com/uhyo/items/80ce7c00f413c1d1be56
 export type AtLeast<N extends number, T> = AtLeastRec<N, T, T[], []>;
+
+class AssertionError extends Error {
+  constructor(message: string) {
+    super(`Assertion failed: ${message}`);
+    Object.setPrototypeOf(this, new.target.prototype);
+  }
+}
+
+export function assert(
+  condition: boolean,
+  message?: string
+): asserts condition {
+  if (!condition) {
+    throw new AssertionError(message || 'Condition is not met.');
+  }
+}
