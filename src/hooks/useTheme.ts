@@ -7,7 +7,7 @@ const THEMES: {
 } = {
   light: 'light',
   dark: 'dark',
-} as const;
+};
 
 const useTheme = () => {
   const [theme, setTheme] = React.useState<Theme>(THEMES.light);
