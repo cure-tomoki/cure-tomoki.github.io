@@ -28,7 +28,7 @@ const IndexPage: React.FC = () => {
 
         {/* about me */}
         <ContentSection>
-          <ContentSectionHeading level={1} id="AboutMe">
+          <ContentSectionHeading level={1} id="aboutMe">
             About Me
           </ContentSectionHeading>
           <p>
@@ -41,10 +41,17 @@ const IndexPage: React.FC = () => {
 
         {/* resume */}
         <ContentSection>
-          <ContentSectionHeading level={1} id="Resume">
+          <ContentSectionHeading level={1} id="resume">
             Résumé
           </ContentSectionHeading>
           <ResumeContent />
+        </ContentSection>
+
+        <ContentSection>
+          <ContentSectionHeading level={1} id="works">
+            Works
+          </ContentSectionHeading>
+          <WipContent>WIP 👷‍♂️</WipContent>
         </ContentSection>
 
         {/* contacts */}
@@ -106,6 +113,12 @@ const TopSubHeadingText = styled.p(({ theme }) => ({
   [theme.media.sp]: {
     fontSize: theme.fontSize.xxs,
   },
+}));
+
+const WipContent = styled.p(({ theme }) => ({
+  fontSize: theme.fontSize.m,
+  textAlign: 'center',
+  color: theme.color.onSurfaceDim,
 }));
 
 export default IndexPage;
