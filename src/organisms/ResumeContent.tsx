@@ -13,15 +13,11 @@ const EmploymentItem = ({ title, description, duration, type }: Employment) => {
   ].join(' ');
   return (
     <_EmploymentItem>
-      <EmploymentTitle aria-label={`${EmploymentTypeMap[type]} at ${title}`}>
-        {title}
-      </EmploymentTitle>
+      <EmploymentTitle>{title}</EmploymentTitle>
       <EmploymentDuration>
         {durationString}
         {type !== 'fullTime' && (
-          <EmploymentType aria-hidden={true}>
-            ({EmploymentTypeMap[type]})
-          </EmploymentType>
+          <EmploymentType>({EmploymentTypeMap[type]})</EmploymentType>
         )}
       </EmploymentDuration>
       <p>{description}</p>
