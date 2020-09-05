@@ -3,6 +3,8 @@ import * as React from 'react';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { Reset } from 'styled-reset';
 
+import GoogleAnalyticsScript from './_GoogleAnaliticsScript';
+
 import useTheme from '~/hooks/useTheme';
 import Footer from '~/organisms/Footer';
 import { isDev } from '~/utils/envUtils';
@@ -78,6 +80,7 @@ const PageTemplate: React.FC<Props> = (props) => {
           href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap"
           rel="stylesheet"
         />
+        <script dangerouslySetInnerHTML={GoogleAnalyticsScript} />
       </Head>
       <Reset />
       <ThemeProvider theme={theme}>
