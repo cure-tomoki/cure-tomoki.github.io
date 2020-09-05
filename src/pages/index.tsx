@@ -5,6 +5,7 @@ import ContentSection from '~/atoms/ContentSection';
 import ContentSectionHeading from '~/atoms/ContentSectionHeading';
 import useWindowSize from '~/hooks/useWindowSize';
 import MainIcon from '~/molecules/MainIcon';
+import ContactsContent from '~/organisms/ContactsContent';
 import ResumeContent from '~/organisms/ResumeContent';
 import PageTemplate from '~/templates/PageTemplate';
 
@@ -44,6 +45,14 @@ const IndexPage: React.FC = () => {
             Résumé
           </ContentSectionHeading>
           <ResumeContent />
+        </ContentSection>
+
+        {/* contacts */}
+        <ContentSection>
+          <ContentSectionHeading level={1} id="contacts">
+            Get in touch
+          </ContentSectionHeading>
+          <ContactsContent />
         </ContentSection>
       </main>
     </PageTemplate>

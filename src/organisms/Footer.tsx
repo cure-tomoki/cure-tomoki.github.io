@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <FooterContent>
         <CopyRight>
           <CopyRightIcon>&#x24B8;</CopyRightIcon>
-          {`tomotetra ${year}`}
+          {`${year} Tomoki Kano. All Rights Reserved.`}
         </CopyRight>
       </FooterContent>
     </_Footer>

@@ -9,6 +9,7 @@
     "node": "12.x"
   },
   "dependencies": {
+    "@styled-icons/feather": "^10.18.0",
     "lodash": "^4.17.20",
     "next": "^9.5.3",
     "preact": "^10.4.8",
