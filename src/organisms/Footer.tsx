@@ -22,7 +22,7 @@ const _Footer = styled.footer(({ theme }) => ({
   marginBottom: theme.spacing.double,
 }));
 
-const FooterContent = styled.footer(({ theme }) => ({
+const FooterContent = styled.div(({ theme }) => ({
   width: '80%',
   fontSize: theme.fontSize.xxs,
   color: theme.color.onBackground,

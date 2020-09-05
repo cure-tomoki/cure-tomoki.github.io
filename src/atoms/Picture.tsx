@@ -2,19 +2,11 @@ import * as React from 'react';
 
 import { AtLeast } from '~/utils/typeUtils';
 
-interface SourceProps
-  extends React.DetailedHTMLProps<
-    React.SourceHTMLAttributes<HTMLSourceElement>,
-    HTMLSourceElement
-  > {
+interface SourceProps extends React.ComponentPropsWithoutRef<'source'> {
   srcSet: string;
 }
 
-interface Props
-  extends React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLElement>,
-    HTMLElement
-  > {
+interface Props extends React.ComponentPropsWithoutRef<'picture'> {
   alt: string;
   sourcePaths: AtLeast<1, SourceProps>;
   width?: number | string;
