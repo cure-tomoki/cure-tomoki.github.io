@@ -1,9 +1,9 @@
-import Head from 'next/head';
 import * as React from 'react';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { Reset } from 'styled-reset';
 
-import { SITE_NAME } from '~/constants';
+import CommonHead from './_CommonHead';
+
 import useTheme from '~/hooks/useTheme';
 import Footer from '~/organisms/Footer';
 import { isDev } from '~/utils/envUtils';
@@ -15,16 +15,10 @@ interface Props {
 
 const PageTemplate: React.FC<Props> = (props) => {
   const { theme, themeName, toggleTheme } = useTheme();
-
-  const title = [SITE_NAME, props.title].filter((t) => !!t).join(' | ');
   return (
     <>
       {/* common head */}
-      <Head>
-        <title>{title}</title>
-        <meta property="og:title" content={title} />
-        <meta name="twitter:title" content={title} />
-      </Head>
+      <CommonHead pageTitle={props.title} />
       <Reset />
       <ThemeProvider theme={theme}>
         <Global />
