@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { GA_ID } from '~/constants';
 
-const GoogleAnalytics: React.FC = () => (
+const GoogleAnalyticsScript: React.FC = () => (
   <script
     dangerouslySetInnerHTML={{
       __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -14,4 +14,4 @@ const GoogleAnalytics: React.FC = () => (
   />
 );
 
-export default GoogleAnalytics;
+export default GoogleAnalyticsScript;
