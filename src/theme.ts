@@ -13,6 +13,7 @@ interface SemanticTheme {
   onBackground: string;
   surface: string;
   onSurface: string;
+  onSurfaceDim: string;
   primary: string;
   onPrimary: string;
   secondary: string;
@@ -35,7 +36,7 @@ const palette = {
   lightBlue: '#0088e1',
   dimBlue: '#007dce',
   marigold: '#eca73c',
-} as const;
+};
 
 const createTheme = (theme: Theme) => {
   const semanticTheme: SemanticTheme =
@@ -46,6 +47,7 @@ const createTheme = (theme: Theme) => {
           onBackground: palette.darkgray,
           surface: palette.whitesmoke,
           onSurface: palette.darkgray,
+          onSurfaceDim: palette.darksilver,
           primary: palette.lightBlue,
           onPrimary: palette.white,
           secondary: palette.marigold,
@@ -57,6 +59,7 @@ const createTheme = (theme: Theme) => {
           onBackground: palette.whitesmoke,
           surface: palette.darkgray,
           onSurface: palette.white,
+          onSurfaceDim: palette.dimsilver,
           primary: palette.dimBlue,
           onPrimary: palette.darkgray,
           secondary: palette.marigold,
@@ -87,7 +90,7 @@ const createTheme = (theme: Theme) => {
       double: SPACING_BASE * 2,
       triple: SPACING_BASE * 3,
       quadruple: SPACING_BASE * 4,
-    } as const,
+    },
 
     // border-radius
     radius: {
@@ -95,13 +98,13 @@ const createTheme = (theme: Theme) => {
       double: RADIUS_BASE * 2,
       quadruple: RADIUS_BASE * 4,
       round: RADIUS_BASE * 1000,
-    } as const,
+    },
 
     // font-family
     fontFamily: {
       default: 'Spinnaker',
       monospaced: 'Andale Mono, Courier New, Lucida Console',
-    } as const,
+    },
 
     // font-sizes
     fontSize: {
@@ -113,7 +116,7 @@ const createTheme = (theme: Theme) => {
       l: '1.6rem',
       xl: '1.8rem',
       xxl: '2rem',
-    } as const,
+    },
   };
 };
 

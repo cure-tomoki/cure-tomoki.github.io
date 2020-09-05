@@ -32,6 +32,13 @@ const CommonStyle = (theme: DefaultTheme): CSSObject => ({
   color: theme.color.onSurface,
   fontWeight: 'bold',
   textTransform: 'uppercase',
+});
+
+const Header1 = styled.h1(({ theme }) => ({
+  ...CommonStyle(theme),
+  fontSize: theme.fontSize.xl,
+  marginBottom: theme.spacing.double,
+
   '&::before': {
     position: 'relative',
     display: 'inline-block',
@@ -45,38 +52,33 @@ const CommonStyle = (theme: DefaultTheme): CSSObject => ({
     transform: 'rotate(45deg)',
     marginRight: theme.spacing.double,
   },
-});
 
-const Header1 = styled.h1(({ theme }) => ({
-  ...CommonStyle(theme),
-  fontSize: theme.fontSize.xl,
-  marginBottom: theme.spacing.normal,
   [theme.media.sp]: {
     fontSize: theme.fontSize.l,
+    marginBottom: theme.spacing.normal,
   },
 }));
 
 const Header2 = styled.h2(({ theme }) => ({
   ...CommonStyle(theme),
-  fontSize: theme.fontSize.l,
-  marginBottom: theme.spacing.normal,
-  [theme.media.sp]: {
-    fontSize: theme.fontSize.m,
-  },
-}));
-
-const Header3 = styled.h3(({ theme }) => ({
-  ...CommonStyle(theme),
   fontSize: theme.fontSize.m,
-  marginBottom: theme.spacing.half,
+  marginBottom: theme.spacing.normal,
   [theme.media.sp]: {
     fontSize: theme.fontSize.s,
   },
 }));
 
+const Header3 = styled.h3(({ theme }) => ({
+  ...CommonStyle(theme),
+  fontSize: theme.fontSize.s,
+  marginBottom: theme.spacing.normal,
+  [theme.media.sp]: {
+    fontSize: theme.fontSize.xs,
+  },
+}));
+
 const Header4 = styled.h4(({ theme }) => ({
   ...CommonStyle(theme),
-  marginBottom: theme.spacing.half,
 }));
 
 export default ContentSectionHeader;

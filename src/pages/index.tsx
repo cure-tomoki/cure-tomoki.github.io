@@ -5,6 +5,7 @@ import ContentSection from '~/atoms/ContentSection';
 import ContentSectionHeading from '~/atoms/ContentSectionHeading';
 import useWindowSize from '~/hooks/useWindowSize';
 import MainIcon from '~/molecules/MainIcon';
+import ResumeContent from '~/organisms/ResumeContent';
 import PageTemplate from '~/templates/PageTemplate';
 
 const IndexPage: React.FC = () => {
@@ -19,12 +20,12 @@ const IndexPage: React.FC = () => {
           <TopTextContainer>
             <TopHeadingText>Tomoki Kano</TopHeadingText>
             <TopSubHeadingText>
-              Web Developer & Designer / Photographer(-ish)
+              Frontend Web Developer / Designer
             </TopSubHeadingText>
           </TopTextContainer>
         </TopSection>
 
-        {/* contents */}
+        {/* about me */}
         <ContentSection>
           <ContentSectionHeading level={1} id="AboutMe">
             About Me
@@ -35,6 +36,14 @@ const IndexPage: React.FC = () => {
             performant, and accessible digital experiences for both users and
             develepers.
           </p>
+        </ContentSection>
+
+        {/* resume */}
+        <ContentSection>
+          <ContentSectionHeading level={1} id="Resume">
+            Résumé
+          </ContentSectionHeading>
+          <ResumeContent />
         </ContentSection>
       </main>
     </PageTemplate>
