@@ -24,7 +24,8 @@ const _Footer = styled.footer(({ theme }) => ({
 
 const FooterContent = styled.footer(({ theme }) => ({
   width: '80%',
-  color: theme.color.onSurface,
+  fontSize: theme.fontSize.xxs,
+  color: theme.color.onBackground,
   maxWidth: theme.constant.maxContentWidth,
   margin: `${theme.spacing.double}px auto`,
   [theme.media.tablet]: {
