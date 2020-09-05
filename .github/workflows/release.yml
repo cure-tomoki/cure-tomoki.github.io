@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: set environment variables
         run: |
-          echo "::set-env name=OUT_DIR::build"
+          echo "::set-env name=OUT_DIR::dist"
 
       - name: checkout
         uses: actions/checkout@v2
@@ -24,9 +24,7 @@ jobs:
         run: yarn test
 
       - name: production build
-        run: |
-          yarn build
-          touch ${{ env.OUT_DIR }}/.nojekyll
+        run: yarn build
 
       - name: upload artifacts
         uses: actions/upload-artifact@v2
@@ -41,7 +39,7 @@ jobs:
     steps:
       - name: set environment variables
         run: |
-          echo "::set-env name=OUT_DIR::build"
+          echo "::set-env name=OUT_DIR::dist"
 
       - name: checkout
         uses: actions/checkout@v2

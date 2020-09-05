@@ -1,4 +1,13 @@
-.DS_Store
+# project
 node_modules/
-build/
-**/*,log
+dist/
+
+# logs
+**/*.log
+
+# cache
+.next/
+.eslintcache
+
+# macos
+.DS_Store

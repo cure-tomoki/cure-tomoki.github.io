@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: set environment variables
         run: |
-          echo "::set-env name=OUT_DIR::build"
+          echo "::set-env name=OUT_DIR::dist"
 
       - name: checkout
         uses: actions/checkout@v2

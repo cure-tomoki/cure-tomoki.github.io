@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "src/*"
+      ]
+    },
+    "rootDir": "./",
+    "outDir": "dist",
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "target": "ES2017",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "typeRoots": [
+      "src/@types",
+      "node_modules/@types"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+  ]
+}

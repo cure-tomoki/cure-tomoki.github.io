@@ -1,25 +1,9 @@
 {
-  "presets": [
+  "presets": ["next/babel"],
+  "plugins": [
     [
-      "@babel/preset-env",
-      {
-        "targets": {
-          "node": "current",
-          "browsers": [
-            "> 1% in JP",
-            "iOS >= 7",
-            "ie >= 9",
-            "Android >= 4"
-          ]
-        },
-        "useBuiltIns": "entry",
-        "corejs": 3
-      }
+      "styled-components",
+      { "ssr": true, "displayName": true, "preprocess": false }
     ]
-  ],
-  "env": {
-    "production": {
-      "presets": ["minify"]
-    }
-  }
+  ]
 }

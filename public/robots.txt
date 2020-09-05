@@ -1,0 +1,3 @@
+User-Agent: *
+Allow: /images/ogp.jpg
+Disallow: /images/
