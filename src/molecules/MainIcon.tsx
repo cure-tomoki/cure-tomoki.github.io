@@ -23,17 +23,12 @@ const MainIcon: React.FC<Props> = ({ size = 256 }) => {
           type: 'image/png',
         },
       ]}
-      size={size}
     />
   );
 };
 
-const _Picture = styled(Picture)<{
-  size?: number | string;
-}>(({ theme, size }) => ({
+const _Picture = styled(Picture)(({ theme }) => ({
   display: 'inline-block',
-  width: size ?? '',
-  height: size ?? '',
   borderRadius: theme.radius.round,
   backgroundColor: theme.color.primary,
 }));
