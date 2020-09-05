@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import ContentSection from '~/atoms/ContentSection';
-import ContentSectionHeader from '~/atoms/ContentSectionHeader';
+import ContentSectionHeading from '~/atoms/ContentSectionHeading';
 import useWindowSize from '~/hooks/useWindowSize';
 import MainIcon from '~/molecules/MainIcon';
 import PageTemplate from '~/templates/PageTemplate';
@@ -19,24 +19,21 @@ const IndexPage: React.FC = () => {
           <TopTextContainer>
             <TopHeadingText>Tomoki Kano</TopHeadingText>
             <TopSubHeadingText>
-              Web Developer / Designer / Photographer
+              Web Developer & Designer / Photographer(-ish)
             </TopSubHeadingText>
           </TopTextContainer>
         </TopSection>
 
         {/* contents */}
         <ContentSection>
-          <ContentSectionHeader level={1} id="AboutMe">
+          <ContentSectionHeading level={1} id="AboutMe">
             About Me
-          </ContentSectionHeader>
+          </ContentSectionHeading>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Hi. My my name is Tomoki, and I am a design-minded frontend web
+            developer based in Tokyo Japan. I focus on creating elegant,
+            performant, and accessible digital experiences for both users and
+            develepers.
           </p>
         </ContentSection>
       </main>

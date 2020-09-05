@@ -10,7 +10,7 @@ const ContentSection: React.FC<Props> = ({ children }) => {
 };
 
 const _ContentSection = styled.section(({ theme }) => ({
-  margin: '0 auto',
+  margin: `0 auto ${theme.spacing.quadruple}px`,
   padding: theme.spacing.quadruple,
   maxWidth: theme.constant.maxContentWidth,
   background: theme.color.surface,
@@ -19,9 +19,10 @@ const _ContentSection = styled.section(({ theme }) => ({
   color: theme.color.onSurface,
   fontSize: theme.fontSize.s,
   [theme.media.tablet]: {
-    margin: `0 ${theme.spacing.double}px`,
+    margin: `0 ${theme.spacing.double}px  ${theme.spacing.double}px`,
   },
   [theme.media.sp]: {
+    fontSize: theme.fontSize.xs,
     borderRadius: theme.radius.double,
     padding: theme.spacing.double,
   },

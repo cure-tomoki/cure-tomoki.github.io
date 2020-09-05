@@ -4,6 +4,7 @@ import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { Reset } from 'styled-reset';
 
 import useTheme from '~/hooks/useTheme';
+import Footer from '~/organisms/Footer';
 import { isDev } from '~/utils/envUtils';
 
 interface Props {
@@ -82,6 +83,8 @@ const PageTemplate: React.FC<Props> = (props) => {
       <ThemeProvider theme={theme}>
         <Global />
         {props.children}
+        {/* footer */}
+        <Footer />
         {/* theme debugger */}
         {isDev && (
           <ThemeButton type="button" onClick={toggleTheme}>
