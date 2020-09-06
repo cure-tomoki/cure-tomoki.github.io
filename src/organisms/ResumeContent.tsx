@@ -1,9 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
+import Button from '~/atoms/Button';
 import ContentSectionHeading from '~/atoms/ContentSectionHeading';
 import Employments, { Employment, EmploymentTypeMap } from '~/data/employment';
 import Skills from '~/data/skills';
+
+const FIRST_VIEW_ITEM_COUNT = 3;
 
 const EmploymentItem = ({ title, description, duration, type }: Employment) => {
   const durationString = [
@@ -26,14 +29,33 @@ const EmploymentItem = ({ title, description, duration, type }: Employment) => {
 };
 
 const ResumeContent: React.FC = () => {
+  const [folded, setFolded] = React.useState(
+    Employments.length > FIRST_VIEW_ITEM_COUNT
+  );
+
+  const data = folded
+    ? Employments.slice(0, FIRST_VIEW_ITEM_COUNT)
+    : Employments;
+
+  const handleUnfold = () => {
+    setFolded(false);
+  };
+
   return (
     <>
       {/* employments */}
       <ContentSectionHeading level={2}>Employment</ContentSectionHeading>
       <EmploymentList>
-        {Employments.map((e, idx) => (
+        {data.map((e, idx) => (
           <EmploymentItem {...e} key={`employmentItem-${idx}`} />
         ))}
+        {folded && (
+          <UnfoldButtonContainer>
+            <UnfoldButton level="secondary" onClick={handleUnfold}>
+              See More
+            </UnfoldButton>
+          </UnfoldButtonContainer>
+        )}
       </EmploymentList>
 
       {/* skills */}
@@ -98,6 +120,24 @@ const EmploymentType = styled.span(({ theme }) => ({
 
 const SkillBodyText = styled.p(({ theme }) => ({
   marginBottom: theme.spacing.double,
+}));
+
+const UnfoldButtonContainer = styled.li(({ theme }) => ({
+  color: theme.color.onSurface,
+  marginLeft: theme.spacing.normal,
+  paddingLeft: theme.spacing.double,
+  paddingBottom: theme.spacing.triple,
+  borderWidth: `0 0 0 2px`,
+  borderStyle: 'solid',
+  borderImage: `linear-gradient(to bottom, ${theme.color.primary}, transparent) 1 100%`,
+  [theme.media.sp]: {
+    paddingBottom: theme.spacing.double,
+  },
+}));
+
+const UnfoldButton = styled(Button)(({ theme }) => ({
+  margin: `${theme.spacing.normal} 0`,
+  fontSize: theme.fontSize.s,
 }));
 
 const SkillList = styled.ul({});
