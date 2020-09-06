@@ -13,12 +13,18 @@ const useTheme = () => {
   const [theme, setTheme] = React.useState<Theme>(THEMES.light);
 
   React.useEffect(() => {
-    if (
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    ) {
-      setTheme(THEMES.dark);
-    }
+    const mediaQuery =
+      window?.matchMedia('(prefers-color-scheme: dark)') || null;
+    if (mediaQuery === null) return;
+    const handleChange = () => {
+      setTheme(mediaQuery.matches ? THEMES.dark : THEMES.light);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
   }, []);
 
   const toggleTheme = () => {
