@@ -3,12 +3,10 @@ import * as React from 'react';
 const useReduceMotion = () => {
   const [isMotionReduced, setIsMotionReduced] = React.useState(false);
 
-  const mediaQuery =
-    (window.matchMedia &&
-      window.matchMedia('(prefers-reduced-motion: reduce)')) ||
-    null;
-
   React.useEffect(() => {
+    const mediaQuery =
+      window?.matchMedia('(prefers-reduced-motion: reduce)') || null;
+
     if (mediaQuery === null) return;
     setIsMotionReduced(mediaQuery.matches);
 
@@ -21,7 +19,7 @@ const useReduceMotion = () => {
     return () => {
       mediaQuery.removeEventListener('change', handleChange);
     };
-  }, [mediaQuery]);
+  }, []);
 
   return {
     isMotionReduced,
