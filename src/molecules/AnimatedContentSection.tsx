@@ -9,17 +9,28 @@ interface Props {
 }
 
 const AnimatiedContentSection: React.FC<Props> = ({ children }) => {
+  const [triggerd, setTriggered] = React.useState(false);
   const ref = React.useRef<HTMLDivElement>(null);
   const { isMotionReduced } = useReduceMotion();
-  const { inView } = useIntersectionObserver(ref);
+  const { inView } = useIntersectionObserver(ref, undefined, {
+    rootMargin: '-50px',
+  });
 
-  console.log({ inView });
+  React.useEffect(() => {
+    if (inView) {
+      setTriggered(true);
+    }
+  }, [inView]);
 
   if (isMotionReduced) {
     return <ContentSection>{children}</ContentSection>;
   }
+
   return (
-    <div ref={ref}>
+    <div
+      ref={ref}
+      style={{ transition: 'opacity 0.3s', opacity: triggerd ? 1 : 0.1 }}
+    >
       <ContentSection>{children}</ContentSection>
     </div>
   );
