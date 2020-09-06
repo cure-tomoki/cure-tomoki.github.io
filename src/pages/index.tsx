@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import ContentSection from '~/atoms/ContentSection';
 import ContentSectionHeading from '~/atoms/ContentSectionHeading';
 import useWindowSize from '~/hooks/useWindowSize';
+import AnimatiedContentSection from '~/molecules/AnimatedContentSection';
 import MainIcon from '~/molecules/MainIcon';
 import ContactsContent from '~/organisms/ContactsContent';
 import ResumeContent from '~/organisms/ResumeContent';
@@ -27,7 +27,7 @@ const IndexPage: React.FC = () => {
         </TopSection>
 
         {/* about me */}
-        <ContentSection>
+        <AnimatiedContentSection>
           <ContentSectionHeading level={1} id="aboutMe">
             About Me
           </ContentSectionHeading>
@@ -37,30 +37,30 @@ const IndexPage: React.FC = () => {
             performant, and accessible digital experiences for both users and
             develepers.
           </p>
-        </ContentSection>
+        </AnimatiedContentSection>
 
         {/* resume */}
-        <ContentSection>
+        <AnimatiedContentSection>
           <ContentSectionHeading level={1} id="resume">
             Résumé
           </ContentSectionHeading>
           <ResumeContent />
-        </ContentSection>
+        </AnimatiedContentSection>
 
-        <ContentSection>
+        <AnimatiedContentSection>
           <ContentSectionHeading level={1} id="works">
             Works
           </ContentSectionHeading>
           <WipContent>WIP 👷‍♂️</WipContent>
-        </ContentSection>
+        </AnimatiedContentSection>
 
         {/* contacts */}
-        <ContentSection>
+        <AnimatiedContentSection>
           <ContentSectionHeading level={1} id="contacts">
             Get in touch
           </ContentSectionHeading>
           <ContactsContent />
-        </ContentSection>
+        </AnimatiedContentSection>
       </main>
     </PageTemplate>
   );
