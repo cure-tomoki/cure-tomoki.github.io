@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import useMediaQuery from '~/hooks/useMediaQuery';
 import createTheme, { Theme } from '~/theme';
 
 const THEMES: {
@@ -12,14 +13,9 @@ const THEMES: {
 const useTheme = () => {
   const [theme, setTheme] = React.useState<Theme>(THEMES.light);
 
-  React.useEffect(() => {
-    if (
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    ) {
-      setTheme(THEMES.dark);
-    }
-  }, []);
+  useMediaQuery('(prefers-color-scheme: dark)', (matches) => {
+    setTheme(matches ? THEMES.dark : THEMES.light);
+  });
 
   const toggleTheme = () => {
     if (theme === THEMES.light) {
