@@ -2,7 +2,7 @@ name: Release Workflow
 
 on:
   pull_request:
-    types: [closed]
+    types: [push, closed]
     branches:
       - main
 
