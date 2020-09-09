@@ -136,7 +136,7 @@ const UnfoldButtonContainer = styled.li(({ theme }) => ({
 }));
 
 const UnfoldButton = styled(Button)(({ theme }) => ({
-  margin: `${theme.spacing.normal} 0`,
+  margin: `${theme.spacing.normal}px 0`,
   fontSize: theme.fontSize.s,
 }));
 
