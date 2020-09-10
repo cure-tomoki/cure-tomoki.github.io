@@ -1,17 +1,32 @@
 import * as React from 'react';
 
 import { GA_ID } from '~/constants';
+import { isDev } from '~/utils/envUtils';
 
-const GoogleAnalyticsScript: React.FC = () => (
-  <script
-    dangerouslySetInnerHTML={{
-      __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','${GA_ID}');`,
-    }}
-  />
-);
+const GoogleAnalyticsScript: React.FC = () => {
+  if (isDev) {
+    // returning null causes nuxt error
+    return (
+      <script
+        dangerouslySetInnerHTML={{
+          __html: 'console.info("DEV: Google Analytics is disabled")',
+        }}
+      />
+    );
+  }
+  return (
+    <>
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${GA_ID}');`,
+        }}
+      />
+    </>
+  );
+};
 
 export default GoogleAnalyticsScript;

@@ -67,6 +67,7 @@ const CommonHead: React.FC<Props> = ({ pageTitle }) => {
         href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap"
         rel="stylesheet"
       />
+      {/* google analytics */}
       <GoogleAnalyticsScript />
     </Head>
   );
