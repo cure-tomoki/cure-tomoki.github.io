@@ -17,20 +17,9 @@ const useTheme = () => {
     setTheme(matches ? THEMES.dark : THEMES.light);
   });
 
-  const toggleTheme = () => {
-    if (theme === THEMES.light) {
-      setTheme(THEMES.dark);
-    } else if (theme === THEMES.dark) {
-      setTheme(THEMES.light);
-    } else {
-      console.warn('could not toggle color theme');
-    }
-  };
-
   return {
     theme: React.useMemo(() => createTheme(theme), [theme]),
     themeName: theme,
-    toggleTheme,
   };
 };
 
