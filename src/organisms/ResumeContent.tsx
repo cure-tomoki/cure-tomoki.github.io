@@ -74,7 +74,6 @@ const ResumeContent: React.FC = () => {
 };
 
 const EmploymentList = styled.ul(({ theme }) => ({
-  marginTop: theme.spacing.double,
   marginBottom: theme.spacing.quadruple,
 }));
 
@@ -86,6 +85,21 @@ const _EmploymentItem = styled.li(({ theme }) => ({
   borderLeft: `2px solid ${theme.color.primary}`,
   [theme.media.sp]: {
     paddingBottom: theme.spacing.double,
+  },
+  '&:first-child': {
+    position: 'relative',
+    paddingLeft: theme.spacing.double + 2,
+    borderLeft: 'none',
+    '&::before': {
+      position: 'absolute',
+      display: 'block',
+      content: '""!important',
+      top: `calc(${theme.fontSize.m} * 1.5 * 0.5)`,
+      left: 0,
+      width: 2,
+      height: `calc(100% - ${theme.fontSize.m} * 1.5 * 0.5)`,
+      backgroundColor: theme.color.primary,
+    },
   },
 }));
 
