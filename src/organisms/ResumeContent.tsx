@@ -1,14 +1,44 @@
+import { Briefcase } from '@styled-icons/feather';
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { DefaultTheme, CSSObject } from 'styled-components';
 
 import Button from '~/atoms/Button';
 import ContentSectionHeading from '~/atoms/ContentSectionHeading';
-import Employments, { Employment, EmploymentTypeMap } from '~/data/employment';
+import Employments, {
+  Employment,
+  EmploymentTypeLabels,
+  ResumeEntryType,
+} from '~/data/resume';
 import Skills from '~/data/skills';
 
 const FIRST_VIEW_ITEM_COUNT = 3;
 
-const EmploymentItem = ({ title, description, duration, type }: Employment) => {
+const ResumeTypeIcon = ({ type }: { type: ResumeEntryType }) => {
+  const Icon = (() => {
+    switch (type) {
+      case 'employment':
+        return Briefcase;
+      default:
+        return null;
+    }
+  })();
+  if (Icon !== null) {
+    return (
+      <IconedTimeLinePoint>
+        <Icon style={{ width: '.9rem', height: '.9rem' }} />
+      </IconedTimeLinePoint>
+    );
+  }
+  return <TimeLinePoint />;
+};
+
+const EmploymentItem = ({
+  title,
+  type,
+  description,
+  duration,
+  employmentType,
+}: Employment) => {
   const durationString = [
     duration.startYear,
     (duration.ongoing || duration.endYear) && '-',
@@ -16,14 +46,17 @@ const EmploymentItem = ({ title, description, duration, type }: Employment) => {
   ].join(' ');
   return (
     <_EmploymentItem>
+      <ResumeTypeIcon type={type} />
       <EmploymentTitle>{title}</EmploymentTitle>
+      {description !== undefined && <p>{description}</p>}
       <EmploymentDuration>
         {durationString}
-        {type !== 'fullTime' && (
-          <EmploymentType>({EmploymentTypeMap[type]})</EmploymentType>
+        {employmentType !== undefined && (
+          <EmploymentType>
+            ({EmploymentTypeLabels[employmentType]})
+          </EmploymentType>
         )}
       </EmploymentDuration>
-      <p>{description}</p>
     </_EmploymentItem>
   );
 };
@@ -77,7 +110,35 @@ const EmploymentList = styled.ul(({ theme }) => ({
   marginBottom: theme.spacing.quadruple,
 }));
 
+const timelinePointFactory = (
+  theme: DefaultTheme,
+  size: number
+): CSSObject => ({
+  content: '""!important',
+  position: 'absolute',
+  top: `calc(0.75 * ${theme.fontSize.m} - ${size / 2}px)`,
+  left: (-1 * size) / 2 - 1,
+  width: size,
+  height: size,
+  boxSizing: 'border-box',
+  border: `2px solid ${theme.color.primary}`,
+  borderRadius: theme.radius.round,
+  backgroundColor: theme.color.primary,
+});
+
+const TimeLinePoint = styled.span(({ theme }) => ({
+  ...timelinePointFactory(theme, 14),
+}));
+
+const IconedTimeLinePoint = styled.span(({ theme }) => ({
+  ...timelinePointFactory(theme, 22),
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+}));
+
 const _EmploymentItem = styled.li(({ theme }) => ({
+  position: 'relative',
   color: theme.color.onSurface,
   marginLeft: theme.spacing.normal,
   paddingLeft: theme.spacing.double,
@@ -88,14 +149,14 @@ const _EmploymentItem = styled.li(({ theme }) => ({
   },
   '&:first-child': {
     position: 'relative',
-    paddingLeft: theme.spacing.double + 2,
+    marginLeft: theme.spacing.normal + 2,
     borderLeft: 'none',
     '&::before': {
       position: 'absolute',
       display: 'block',
       content: '""!important',
       top: `calc(${theme.fontSize.m} * 1.5 * 0.5)`,
-      left: 0,
+      left: -2,
       width: 2,
       height: `calc(100% - ${theme.fontSize.m} * 1.5 * 0.5)`,
       backgroundColor: theme.color.primary,
@@ -104,23 +165,8 @@ const _EmploymentItem = styled.li(({ theme }) => ({
 }));
 
 const EmploymentTitle = styled.p(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
   fontSize: theme.fontSize.m,
   fontWeight: 'bold',
-  position: 'relative',
-  '&::before': {
-    content: '""!important',
-    position: 'absolute',
-    top: '50%',
-    left: theme.spacing.triple * -1,
-    transform: 'translateY(-50%)',
-    width: 10,
-    height: 10,
-    border: `2px solid ${theme.color.primary}`,
-    borderRadius: theme.radius.round,
-    backgroundColor: theme.color.surface,
-  },
 }));
 
 const EmploymentDuration = styled.span(({ theme }) => ({

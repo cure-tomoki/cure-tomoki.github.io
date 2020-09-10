@@ -1,6 +1,7 @@
-export type EmploymentType = 'fullTime' | 'partTime' | 'intern';
+export type ResumeEntryType = 'employment' | 'lifeEvent' | 'other';
 
-export const EmploymentTypeMap: { [x in EmploymentType]: string } = {
+export type EmploymentType = 'fullTime' | 'partTime' | 'intern';
+export const EmploymentTypeLabels: { [x in EmploymentType]: string } = {
   fullTime: 'Full-time',
   partTime: 'Part-time',
   intern: 'Internship',
@@ -8,8 +9,9 @@ export const EmploymentTypeMap: { [x in EmploymentType]: string } = {
 
 export interface Employment {
   title: string;
+  type: ResumeEntryType;
   description?: string;
-  type: EmploymentType;
+  employmentType?: EmploymentType;
   duration: {
     startYear: string;
     endYear?: string;
@@ -20,8 +22,8 @@ export interface Employment {
 const Employments: Employment[] = [
   {
     title: 'Cyberagent Inc.',
-    description: 'Full time frontend developer at Ameba.',
-    type: 'fullTime',
+    type: 'employment',
+    description: 'Full time Web frontend developer at Ameba.',
     duration: {
       startYear: '2019.04',
       ongoing: true,
@@ -29,17 +31,26 @@ const Employments: Employment[] = [
   },
   {
     title: 'Anyflow Inc.',
-    type: 'partTime',
+    type: 'employment',
+    employmentType: 'partTime',
     duration: {
       startYear: '2020.07',
       ongoing: true,
     },
   },
   {
+    title: 'Graduated Doshisha University',
+    type: 'lifeEvent',
+    description: 'BSc in Computer Science.',
+    duration: {
+      startYear: '2019.03',
+    },
+  },
+  {
     title: 'PIXTA Inc.',
-    description:
-      'Part time job as full stack engineer. Founding member of mecelo.jp.',
-    type: 'partTime',
+    type: 'employment',
+    description: 'Worked full-stack at mecelo.jp.',
+    employmentType: 'partTime',
     duration: {
       startYear: '2018.07',
       endYear: '2019.09',
@@ -47,7 +58,8 @@ const Employments: Employment[] = [
   },
   {
     title: 'Cyberagent Inc.',
-    type: 'intern',
+    type: 'employment',
+    employmentType: 'intern',
     duration: {
       startYear: '2018.08',
       endYear: '2018.10',
@@ -55,23 +67,26 @@ const Employments: Employment[] = [
   },
   {
     title: 'ATeam Inc.',
-    type: 'intern',
+    type: 'employment',
+    employmentType: 'intern',
     duration: {
       startYear: '2017.08',
     },
   },
   {
     title: 'VOYAGE GROUP Inc.',
+    type: 'employment',
     description: 'Treasure 2017',
-    type: 'intern',
+    employmentType: 'intern',
     duration: {
       startYear: '2017.08',
     },
   },
   {
     title: 'activo Inc.',
-    description: 'Part time job as frontend engineer.',
-    type: 'partTime',
+    type: 'employment',
+    description: 'Fist ever job as a web frontend engineer.',
+    employmentType: 'partTime',
     duration: {
       startYear: '2016.08',
       endYear: '2017.10',
