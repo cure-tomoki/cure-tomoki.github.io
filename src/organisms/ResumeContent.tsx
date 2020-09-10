@@ -1,40 +1,16 @@
-import { Briefcase } from '@styled-icons/feather';
+// import { Briefcase } from '@styled-icons/feather';
 import * as React from 'react';
 import styled, { DefaultTheme, CSSObject } from 'styled-components';
 
 import Button from '~/atoms/Button';
 import ContentSectionHeading from '~/atoms/ContentSectionHeading';
-import Employments, {
-  Employment,
-  EmploymentTypeLabels,
-  ResumeEntryType,
-} from '~/data/resume';
+import Employments, { Employment, EmploymentTypeLabels } from '~/data/resume';
 import Skills from '~/data/skills';
 
 const FIRST_VIEW_ITEM_COUNT = 3;
 
-const ResumeTypeIcon = ({ type }: { type: ResumeEntryType }) => {
-  const Icon = (() => {
-    switch (type) {
-      case 'employment':
-        return Briefcase;
-      default:
-        return null;
-    }
-  })();
-  if (Icon !== null) {
-    return (
-      <IconedTimeLinePoint>
-        <Icon style={{ width: '.9rem', height: '.9rem' }} />
-      </IconedTimeLinePoint>
-    );
-  }
-  return <TimeLinePoint />;
-};
-
 const EmploymentItem = ({
   title,
-  type,
   description,
   duration,
   employmentType,
@@ -46,7 +22,7 @@ const EmploymentItem = ({
   ].join(' ');
   return (
     <_EmploymentItem>
-      <ResumeTypeIcon type={type} />
+      <TimeLinePoint />
       <EmploymentTitle>{title}</EmploymentTitle>
       {description !== undefined && <p>{description}</p>}
       <EmploymentDuration>
@@ -127,14 +103,7 @@ const timelinePointFactory = (
 });
 
 const TimeLinePoint = styled.span(({ theme }) => ({
-  ...timelinePointFactory(theme, 14),
-}));
-
-const IconedTimeLinePoint = styled.span(({ theme }) => ({
-  ...timelinePointFactory(theme, 22),
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
+  ...timelinePointFactory(theme, 10),
 }));
 
 const _EmploymentItem = styled.li(({ theme }) => ({
