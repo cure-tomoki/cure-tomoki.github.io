@@ -84,7 +84,7 @@ const ResumeContent: React.FC = () => {
         ))}
         {folded && (
           <UnfoldButtonContainer>
-            <UnfoldButton level="secondary" onClick={handleUnfold}>
+            <UnfoldButton level="primary" onClick={handleUnfold}>
               See More
             </UnfoldButton>
           </UnfoldButtonContainer>
@@ -198,6 +198,7 @@ const UnfoldButtonContainer = styled.li(({ theme }) => ({
 const UnfoldButton = styled(Button)(({ theme }) => ({
   margin: `${theme.spacing.normal}px 0`,
   fontSize: theme.fontSize.s,
+  fontWeight: 'normal',
 }));
 
 const SkillList = styled.ul({});
