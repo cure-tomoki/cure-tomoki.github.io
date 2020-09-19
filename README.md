@@ -1,6 +1,6 @@
-# tomotetra.github.io
+# cure-tomoki.github.io
 
-https://tomotetra.github.io
+https://cure-tomoki.github.io
 
 Build with
 - typescript

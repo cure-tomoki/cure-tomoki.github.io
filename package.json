@@ -1,9 +1,9 @@
 {
-  "name": "tomotetra.github.io",
+  "name": "cure-tomoki.github.io",
   "version": "2.3.1",
   "main": "src/js/index.js",
-  "repository": "https://github.com/tomotetra/tomotetra.github.io.git",
-  "author": "tomotetra <cure.tomoki@gmail.com>",
+  "repository": "https://github.com/cure-tomoki/cure-tomoki.github.io.git",
+  "author": "cure-tomoki <cure.tomoki@gmail.com>",
   "license": "MIT",
   "engines": {
     "node": "12.x"

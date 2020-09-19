@@ -18,8 +18,8 @@ const Contacts: Contact[] = [
 
   {
     serviceName: 'GitHub',
-    accountName: '@tomotetra',
-    pageURL: 'https://github.com/tomotetra',
+    accountName: '@cure-tomoki',
+    pageURL: 'https://github.com/cure-tomoki',
     Icon: Github,
   },
 
