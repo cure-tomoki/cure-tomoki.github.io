@@ -1,8 +1,12 @@
 name: Release Workflow
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
-    types: [push, closed]
+    types:
+      - closed
     branches:
       - main
 
