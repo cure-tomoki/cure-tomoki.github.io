@@ -30,8 +30,14 @@ const MainIcon: React.FC<Props> = ({ size = 256 }) => {
 
 const _Picture = styled(Picture)(({ theme }) => ({
   display: 'inline-block',
+  boxSizing: 'border-box',
   borderRadius: theme.radius.round,
+  border: `${theme.spacing.half}px solid ${theme.color.onBackground}`,
   backgroundColor: theme.color.primary,
+  overflow: 'hidden',
+  [theme.media.tablet]: {
+    borderWidth: theme.spacing.quarter,
+  },
 }));
 
 export default MainIcon;
