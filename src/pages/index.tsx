@@ -35,7 +35,7 @@ const IndexPage: React.FC = () => {
             Hi. My my name is Tomoki, and I am a design-minded frontend web
             developer based in Tokyo Japan. I focus on creating elegant,
             performant, and accessible digital experiences for both users and
-            develepers.
+            developers.
           </p>
         </AnimatiedContentSection>
 
