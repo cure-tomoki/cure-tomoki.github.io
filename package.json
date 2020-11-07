@@ -6,7 +6,7 @@
   "author": "cure-tomoki <cure.tomoki@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "dependencies": {
     "@styled-icons/feather": "^10.18.0",
