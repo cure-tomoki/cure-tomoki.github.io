@@ -11,8 +11,8 @@ export interface Contact {
 const Contacts: Contact[] = [
   {
     serviceName: 'Twitter',
-    accountName: '@cure_tomoki',
-    pageURL: 'https://twitter.com/cure_tomoki',
+    accountName: '@cure_tmk',
+    pageURL: 'https://twitter.com/cure_tmk',
     Icon: Twitter,
   },
 
