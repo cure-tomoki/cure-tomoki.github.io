@@ -43,10 +43,19 @@
       }
     ],
     "@typescript-eslint/no-unused-vars": [
-      "error", {
-        "argsIgnorePattern": "^_",
+      "error",
+      {
+        "argsIgnorePattern": "^_"
       }
     ],
     "no-shadow": "error"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-use-before-define": "off"
+      }
+    }
+  ]
 }
