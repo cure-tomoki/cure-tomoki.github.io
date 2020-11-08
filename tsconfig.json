@@ -2,9 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "src/*"
-      ]
+      "~/*": ["src/*"]
     },
     "rootDir": "./",
     "outDir": "dist",
@@ -18,14 +16,8 @@
     "target": "ES2017",
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "lib": [
-      "dom",
-      "es2017"
-    ],
-    "typeRoots": [
-      "src/@types",
-      "node_modules/@types"
-    ],
+    "lib": ["dom", "es2017"],
+    "typeRoots": ["src/@types", "node_modules/@types"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -35,11 +27,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

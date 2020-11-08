@@ -13,8 +13,8 @@ const ContactItem = ({ serviceName, accountName, pageURL, Icon }: Contact) => {
     <_ContactItem>
       <ContactLink href={pageURL} target="_blank">
         <Icon
-          aria-label={serviceName}
           aria-hidden="false"
+          aria-label={serviceName}
           height={isSP ? 24 : 32}
           width={isSP ? 24 : 32}
         />
@@ -37,8 +37,8 @@ const ContactsContent: React.FC = () => {
       <Email>
         <ContactLink href="mailto:kano_tomoki@cyberagent.co.jp">
           <Mail
-            aria-label={'email'}
             aria-hidden="false"
+            aria-label={'email'}
             height={isSP ? 24 : 32}
             width={isSP ? 24 : 32}
           />

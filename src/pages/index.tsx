@@ -28,7 +28,7 @@ const IndexPage: React.FC = () => {
 
         {/* about me */}
         <AnimatiedContentSection>
-          <ContentSectionHeading level={1} id="aboutMe">
+          <ContentSectionHeading id="aboutMe" level={1}>
             About Me
           </ContentSectionHeading>
           <p>
@@ -41,14 +41,14 @@ const IndexPage: React.FC = () => {
 
         {/* resume */}
         <AnimatiedContentSection>
-          <ContentSectionHeading level={1} id="resume">
+          <ContentSectionHeading id="resume" level={1}>
             Résumé
           </ContentSectionHeading>
           <ResumeContent />
         </AnimatiedContentSection>
 
         <AnimatiedContentSection>
-          <ContentSectionHeading level={1} id="works">
+          <ContentSectionHeading id="works" level={1}>
             Works
           </ContentSectionHeading>
           <WipContent>WIP 👷‍♂️</WipContent>
@@ -56,7 +56,7 @@ const IndexPage: React.FC = () => {
 
         {/* contacts */}
         <AnimatiedContentSection>
-          <ContentSectionHeading level={1} id="contacts">
+          <ContentSectionHeading id="contacts" level={1}>
             Get in touch
           </ContentSectionHeading>
           <ContactsContent />

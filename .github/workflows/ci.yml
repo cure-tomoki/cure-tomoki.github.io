@@ -18,8 +18,8 @@ jobs:
       - name: install dependencies
         run: yarn install
 
-      - name: test
-        run: yarn test
+      - name: lint
+        run: yarn lint
 
       - name: production build
         run: yarn build

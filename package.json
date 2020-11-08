@@ -17,7 +17,8 @@
     "react": "preact-compat/react#1.x",
     "react-dom": "preact-compat/react-dom#1.x",
     "styled-components": "^5.2.1",
-    "styled-reset": "^4.3.0"
+    "styled-reset": "^4.3.0",
+    "uuid": "^8.3.1"
   },
   "devDependencies": {
     "@prefresh/next": "^1.4.0",
@@ -45,8 +46,12 @@
   "scripts": {
     "build": "next build && next export -o dist",
     "dev": "next dev",
-    "test": "run-p lint:tsc lint:eslint",
-    "lint:tsc": "tsc --noEmit",
-    "lint:eslint": "eslint --ext .ts,.tsx,.js --cache src"
+    "lint": "run-p tsc eslint prettier",
+    "lint:fix": "run-s tsc fix:eslint fix:prettier",
+    "tsc": "tsc --noEmit",
+    "eslint": "eslint --ext .ts,.tsx .",
+    "eslint:fix": "yarn eslint --fix",
+    "prettier": "prettier --check .",
+    "prettier:fix": "yarn prettier --write"
   }
 }

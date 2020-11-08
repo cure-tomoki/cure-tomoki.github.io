@@ -3,11 +3,11 @@
 https://cure-tomoki.github.io
 
 Build with
+
 - typescript
 - next.js
 - preact
 - styled-components
-
 
 ## Development
 

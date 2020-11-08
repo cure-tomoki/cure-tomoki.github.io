@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import { AtLeast } from '~/utils/typeUtils';
 
@@ -25,9 +26,9 @@ const Picture: React.FC<Props> = ({
   return (
     <picture {...pictureProps}>
       {sourcePaths.map((s) => (
-        <source {...s}></source>
+        <source {...s} key={`Picture_${uuidv4()}`}></source>
       ))}
-      <img src={fallBackSrc} alt={alt} {...{ width, height }}></img>
+      <img alt={alt} src={fallBackSrc} {...{ width, height }}></img>
     </picture>
   );
 };

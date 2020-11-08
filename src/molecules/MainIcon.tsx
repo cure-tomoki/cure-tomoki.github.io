@@ -11,7 +11,6 @@ const MainIcon: React.FC<Props> = ({ size = 256 }) => {
   return (
     <_Picture
       alt="profile picture"
-      width={size}
       height={size}
       sourcePaths={[
         {
@@ -24,6 +23,7 @@ const MainIcon: React.FC<Props> = ({ size = 256 }) => {
         },
       ]}
       style={{ width: size, height: size }}
+      width={size}
     />
   );
 };

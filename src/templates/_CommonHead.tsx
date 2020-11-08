@@ -14,53 +14,53 @@ const CommonHead: React.FC<Props> = ({ pageTitle }) => {
   return (
     <Head>
       <title>{title}</title>
-      <meta name="author" content="Tomoki Kano" />
-      <meta name="release" content={`v${process.env.VERSION}`} />
-      <meta name="environment" content={process.env.ENV} />
+      <meta content="Tomoki Kano" name="author" />
+      <meta content={`v${process.env.VERSION}`} name="release" />
+      <meta content={process.env.ENV} name="environment" />
       {/* ogp */}
-      <meta property="og:title" content={title} />
-      <meta property="og:url" content="https://cure-tomoki.github.io" />
-      <meta property="og:type" content="website" />
-      <meta property="og:locale" content="en" />
-      <meta property="og:locale:alternate" content="ja" />
-      <meta property="og:site_name" content={SITE_NAME} />
+      <meta content={title} property="og:title" />
+      <meta content="https://cure-tomoki.github.io" property="og:url" />
+      <meta content="website" property="og:type" />
+      <meta content="en" property="og:locale" />
+      <meta content="ja" property="og:locale:alternate" />
+      <meta content={SITE_NAME} property="og:site_name" />
       <meta
-        property="og:description"
         content="A Web Developer/Designer in Tokyo JP"
+        property="og:description"
       />
       <meta
-        property="og:image"
         content="https://cure-tomoki.github.io/images/ogp.jpg"
+        property="og:image"
       />
       {/* twitter */}
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@cure_tomoki" />
+      <meta content={title} name="twitter:title" />
+      <meta content="summary" name="twitter:card" />
+      <meta content="@cure_tomoki" name="twitter:site" />
       <meta
-        name="twitter:description"
         content="A Web Developer/Designer in Tokyo JP"
+        name="twitter:description"
       />
       <meta
-        name="twitter:image"
         content="https://cure-tomoki.github.io/images/ogp.jpg"
+        name="twitter:image"
       />
       {/* favicon */}
       <link
+        href="/apple-touch-icon.png"
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/apple-touch-icon.png"
       />
       <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
         href="/favicon-32x32.png"
+        rel="icon"
+        sizes="32x32"
+        type="image/png"
       />
       <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
         href="/favicon-16x16.png"
+        rel="icon"
+        sizes="16x16"
+        type="image/png"
       />
       {/* customFont */}
       <link
