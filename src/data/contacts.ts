@@ -25,8 +25,8 @@ const Contacts: Contact[] = [
 
   {
     serviceName: 'Instagram',
-    accountName: 'cure_tomoki',
-    pageURL: 'https://www.instagram.com/cure_tomoki/',
+    accountName: 'cure_tmk',
+    pageURL: 'https://www.instagram.com/cure_tmk/',
     Icon: Instagram,
   },
 
