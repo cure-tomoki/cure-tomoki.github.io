@@ -1,6 +1,6 @@
 {
   "name": "cure-tomoki.github.io",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "main": "src/js/index.js",
   "repository": "https://github.com/cure-tomoki/cure-tomoki.github.io.git",
   "author": "cure-tomoki <cure.tomoki@gmail.com>",
