@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: set environment variables
         run: |
-          echo "::set-env name=OUT_DIR::dist"
+          echo "OUT_DIR=dist" >> $GITHUB_ENV
 
       - name: checkout
         uses: actions/checkout@v2
@@ -43,7 +43,7 @@ jobs:
     steps:
       - name: set environment variables
         run: |
-          echo "::set-env name=OUT_DIR::dist"
+          echo "OUT_DIR=dist" >> $GITHUB_ENV
 
       - name: checkout
         uses: actions/checkout@v2
