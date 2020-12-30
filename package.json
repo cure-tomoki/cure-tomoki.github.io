@@ -12,10 +12,8 @@
     "@styled-icons/feather": "^10.18.0",
     "lodash": "^4.17.20",
     "next": "^10.0.4",
-    "preact": "^10.5.7",
-    "preact-render-to-string": "^5.1.12",
-    "react": "preact-compat/react#1.x",
-    "react-dom": "preact-compat/react-dom#1.x",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "styled-components": "^5.2.1",
     "styled-reset": "^4.3.4",
     "uuid": "^8.3.2"

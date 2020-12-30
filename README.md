@@ -6,7 +6,6 @@ Build with
 
 - typescript
 - next.js
-- preact
 - styled-components
 
 ## Development
