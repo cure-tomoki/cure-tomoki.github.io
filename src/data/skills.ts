@@ -8,7 +8,7 @@ const skills: string[] = [
   'Vue.js',
   'Node.js',
   'Ruby',
-  'Go'
+  'Go',
 ];
 
 export default skills;
