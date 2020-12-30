@@ -19,7 +19,7 @@ const CommonHead: React.FC<Props> = ({ pageTitle }) => {
       <meta content={process.env.ENV} name="environment" />
       {/* ogp */}
       <meta content={title} property="og:title" />
-      <meta content="https://cure-tomoki.github.io" property="og:url" />
+      <meta content="https://cure-tmk.github.io" property="og:url" />
       <meta content="website" property="og:type" />
       <meta content="en" property="og:locale" />
       <meta content="ja" property="og:locale:alternate" />
@@ -29,19 +29,19 @@ const CommonHead: React.FC<Props> = ({ pageTitle }) => {
         property="og:description"
       />
       <meta
-        content="https://cure-tomoki.github.io/images/ogp.jpg"
+        content="https://cure-tmk.github.io/images/ogp.jpg"
         property="og:image"
       />
       {/* twitter */}
       <meta content={title} name="twitter:title" />
       <meta content="summary" name="twitter:card" />
-      <meta content="@cure_tomoki" name="twitter:site" />
+      <meta content="@cure_tmk" name="twitter:site" />
       <meta
         content="A Web Developer/Designer in Tokyo JP"
         name="twitter:description"
       />
       <meta
-        content="https://cure-tomoki.github.io/images/ogp.jpg"
+        content="https://cure-tmk.github.io/images/ogp.jpg"
         name="twitter:image"
       />
       {/* favicon */}

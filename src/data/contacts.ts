@@ -18,14 +18,14 @@ const Contacts: Contact[] = [
 
   {
     serviceName: 'GitHub',
-    accountName: '@cure-tomoki',
-    pageURL: 'https://github.com/cure-tomoki',
+    accountName: '@cure-tmk',
+    pageURL: 'https://github.com/cure-tmk',
     Icon: Github,
   },
 
   {
     serviceName: 'Instagram',
-    accountName: 'cure_tmk',
+    accountName: '@cure_tmk',
     pageURL: 'https://www.instagram.com/cure_tmk/',
     Icon: Instagram,
   },
@@ -33,7 +33,7 @@ const Contacts: Contact[] = [
   {
     serviceName: 'Facebook',
     accountName: 'Tomoki Kano',
-    pageURL: 'https://www.facebook.com/cure.tomoki/',
+    pageURL: 'https://www.facebook.com/cure.tmk/',
     Icon: Facebook,
   },
 ];

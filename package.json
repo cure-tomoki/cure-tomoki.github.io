@@ -1,9 +1,9 @@
 {
-  "name": "cure-tomoki.github.io",
+  "name": "cure-tmk.github.io",
   "version": "2.5.1",
   "main": "src/js/index.js",
-  "repository": "https://github.com/cure-tomoki/cure-tomoki.github.io.git",
-  "author": "cure-tomoki <cure.tomoki@gmail.com>",
+  "repository": "https://github.com/cure-tmk/cure-tmk.github.io.git",
+  "author": "cure-tmk <cure.tomoki@gmail.com>",
   "license": "MIT",
   "engines": {
     "node": "14.x"

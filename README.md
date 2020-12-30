@@ -1,6 +1,6 @@
-# cure-tomoki.github.io
+# cure-tmk.github.io
 
-https://cure-tomoki.github.io
+https://cure-tmk.github.io
 
 Build with
 
