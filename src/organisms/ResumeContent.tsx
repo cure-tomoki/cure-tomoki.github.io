@@ -70,7 +70,7 @@ const ResumeContent: React.FC = () => {
       {/* skills */}
       <ContentSectionHeading level={2}>Skills</ContentSectionHeading>
       <SkillBodyText>
-        Languages and Frameworks that I frequently use and fluent at.
+        Languages and Frameworks that I frequently use.
       </SkillBodyText>
       <SkillList>
         {Skills.map((skill, idx) => (
@@ -174,20 +174,9 @@ const SkillList = styled.ul({});
 
 const SkillItem = styled.li(({ theme }) => ({
   display: 'inline-block',
-  marginRight: theme.spacing.half,
+  marginRight: theme.spacing.normal,
   marginBottom: theme.spacing.half,
-  padding: `0 ${theme.spacing.normal}px`,
   color: theme.color.onSurface,
-  backgroundColor: 'transparent',
-  border: `1px solid ${theme.color.onSurface}`,
-  borderRadius: theme.radius.round,
-  transition: '.3s',
-  '&:hover': {
-    fontWeight: 'bold',
-    backgroundColor: theme.color.onSurface,
-    color: theme.color.surface,
-    transition: '.3s',
-  },
 }));
 
 const SkillItemAndMore = styled.li(({ theme }) => ({

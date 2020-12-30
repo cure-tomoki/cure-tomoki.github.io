@@ -4,10 +4,11 @@ const skills: string[] = [
   'JavaScript',
   'TypeScript',
   'React',
+  'Next.js',
   'Vue.js',
   'Node.js',
   'Ruby',
-  'Ruby on Rails',
+  'Go'
 ];
 
 export default skills;
