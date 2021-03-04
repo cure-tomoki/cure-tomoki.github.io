@@ -30,12 +30,21 @@ const Employments: Employment[] = [
     },
   },
   {
+    title: 'BluAge Inc.',
+    type: 'employment',
+    employmentType: 'partTime',
+    duration: {
+      startYear: '2021.03',
+      ongoing: true,
+    },
+  },
+  {
     title: 'Anyflow Inc.',
     type: 'employment',
     employmentType: 'partTime',
     duration: {
       startYear: '2020.07',
-      ongoing: true,
+      endYear: '2021.03',
     },
   },
   {
