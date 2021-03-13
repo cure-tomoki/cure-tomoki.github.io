@@ -1,6 +1,6 @@
 {
   "name": "cure-tmk.github.io",
-  "version": "2.5.1",
+  "version": "2.6.0",
   "main": "src/js/index.js",
   "repository": "https://github.com/cure-tmk/cure-tmk.github.io.git",
   "author": "cure-tmk <cure.tomoki@gmail.com>",

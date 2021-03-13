@@ -4,35 +4,32 @@ import styled, { DefaultTheme, CSSObject } from 'styled-components';
 
 import Button from '~/atoms/Button';
 import ContentSectionHeading from '~/atoms/ContentSectionHeading';
-import Employments, { Employment, EmploymentTypeLabels } from '~/data/resume';
-import Skills from '~/data/skills';
+import Employments, { Employment } from '~/data/resume';
 
 const FIRST_VIEW_ITEM_COUNT = 3;
 
 const EmploymentItem = ({
   title,
-  description,
   duration,
-  employmentType,
+
+  content,
 }: Employment) => {
-  const durationString = [
-    duration.startYear,
-    (duration.ongoing || duration.endYear) && '-',
-    (duration.ongoing && 'today') || duration.endYear,
-  ].join(' ');
+  const durationString =
+    typeof duration === 'string'
+      ? duration
+      : [
+          duration.startYear,
+          `-`,
+          duration.endYear ? duration.endYear : '',
+        ].join(' ');
   return (
     <_EmploymentItem>
       <TimeLinePoint />
-      <EmploymentTitle>{title}</EmploymentTitle>
-      {description !== undefined && <p>{description}</p>}
-      <EmploymentDuration>
-        {durationString}
-        {employmentType !== undefined && (
-          <EmploymentType>
-            ({EmploymentTypeLabels[employmentType]})
-          </EmploymentType>
-        )}
-      </EmploymentDuration>
+      <EmploymentTitle>
+        <EmploymentTitleText>{title}</EmploymentTitleText>
+        <EmploymentDuration>{durationString}</EmploymentDuration>
+      </EmploymentTitle>
+      {content}
     </_EmploymentItem>
   );
 };
@@ -69,11 +66,20 @@ const ResumeContent: React.FC = () => {
 
       {/* skills */}
       <ContentSectionHeading level={2}>Skills</ContentSectionHeading>
-      <SkillBodyText>
-        Languages and Frameworks that I frequently use.
-      </SkillBodyText>
+      <SkillBodyText>Languages and frameworks I frequently use:</SkillBodyText>
       <SkillList>
-        {Skills.map((skill, idx) => (
+        {[
+          'HTML',
+          'CSS',
+          'JavaScript',
+          'TypeScript',
+          'React',
+          'Next.js',
+          'Vue.js',
+          'Node.js',
+          'Ruby',
+          'Go',
+        ].map((skill, idx) => (
           <SkillItem key={`skillItem-${idx}`}>{skill}</SkillItem>
         ))}
         <SkillItemAndMore>and more...</SkillItemAndMore>
@@ -133,21 +139,31 @@ const _EmploymentItem = styled.li(({ theme }) => ({
   },
 }));
 
-const EmploymentTitle = styled.p(({ theme }) => ({
+const EmploymentTitle = styled.div({
+  display: 'flex',
+  alignItems: 'baseline',
+  justifyContent: 'space-between',
+});
+
+const EmploymentTitleText = styled.span(({ theme }) => ({
+  flex: '0 1 auto',
   fontSize: theme.fontSize.m,
   fontWeight: 'bold',
 }));
 
 const EmploymentDuration = styled.span(({ theme }) => ({
-  color: theme.color.onSurfaceDim,
-  fontSize: theme.fontSize.xs,
-}));
-
-const EmploymentType = styled.span(({ theme }) => ({
+  flex: '0 0 auto',
   marginLeft: theme.spacing.normal,
+  color: theme.color.onSurfaceVeryDim,
+  fontSize: theme.fontSize.xs,
+  [theme.media.sp]: {
+    marginLeft: theme.spacing.half,
+    fontSize: theme.fontSize.xxs,
+  },
 }));
 
 const SkillBodyText = styled.p(({ theme }) => ({
+  color: theme.color.onSurfaceDim,
   marginBottom: theme.spacing.double,
 }));
 
@@ -184,7 +200,7 @@ const SkillItemAndMore = styled.li(({ theme }) => ({
   marginRight: theme.spacing.half,
   marginBottom: theme.spacing.half,
   padding: `0 ${theme.spacing.normal}px`,
-  color: theme.color.onSurfaceDim,
+  color: theme.color.onSurfaceVeryDim,
 }));
 
 export default ResumeContent;

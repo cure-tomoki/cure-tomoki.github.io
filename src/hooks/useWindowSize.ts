@@ -9,10 +9,7 @@ interface Dimentions {
 }
 
 const useWindowSize = () => {
-  const [dimentions, setDimentions] = React.useState<Dimentions>({
-    width: 200,
-    height: 800,
-  });
+  const [dimentions, setDimentions] = React.useState<Dimentions | null>(null);
   const [isSP, setIsSP] = React.useState(true);
   const [isTablet, setIsTablet] = React.useState(false);
 
@@ -33,13 +30,15 @@ const useWindowSize = () => {
   }, []);
 
   React.useEffect(() => {
+    if (dimentions === null) {
+      return;
+    }
     setIsSP(dimentions.width < SP_MAX_WIDTH);
     setIsTablet(dimentions.width < TABLET_MAX_WIDTH);
-  }, [dimentions.width]);
+  }, [dimentions]);
 
   return {
-    width: dimentions.width,
-    height: dimentions.height,
+    dimentions,
     isSP,
     isTablet,
   };

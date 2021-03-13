@@ -109,6 +109,7 @@ const TopHeadingText = styled.h1(({ theme }) => ({
 }));
 
 const TopSubHeadingText = styled.p(({ theme }) => ({
+  color: theme.color.onBackgroundDim,
   fontSize: theme.fontSize.xs,
   [theme.media.sp]: {
     fontSize: theme.fontSize.xxs,
@@ -118,7 +119,7 @@ const TopSubHeadingText = styled.p(({ theme }) => ({
 const WipContent = styled.p(({ theme }) => ({
   fontSize: theme.fontSize.m,
   textAlign: 'center',
-  color: theme.color.onSurfaceDim,
+  color: theme.color.onSurfaceVeryDim,
 }));
 
 export default IndexPage;
