@@ -11,9 +11,11 @@ export type Theme = 'light' | 'dark';
 interface SemanticTheme {
   background: string;
   onBackground: string;
+  onBackgroundDim: string;
   surface: string;
   onSurface: string;
   onSurfaceDim: string;
+  onSurfaceVeryDim: string;
   primary: string;
   primaryLight: string;
   onPrimary: string;
@@ -47,9 +49,11 @@ const createTheme = (theme: Theme) => {
         {
           background: palette.white,
           onBackground: palette.darkgray,
+          onBackgroundDim: palette.lightgray,
           surface: palette.whitesmoke,
           onSurface: palette.darkgray,
-          onSurfaceDim: palette.darksilver,
+          onSurfaceDim: palette.gray,
+          onSurfaceVeryDim: palette.darksilver,
           primary: palette.blue,
           primaryLight: palette.lightBlue,
           onPrimary: palette.white,
@@ -60,9 +64,11 @@ const createTheme = (theme: Theme) => {
         {
           background: palette.black,
           onBackground: palette.whitesmoke,
+          onBackgroundDim: palette.silver,
           surface: palette.darkgray,
           onSurface: palette.white,
-          onSurfaceDim: palette.dimsilver,
+          onSurfaceDim: palette.lightsilver,
+          onSurfaceVeryDim: palette.darksilver,
           primary: palette.dimBlue,
           primaryLight: palette.blue,
           onPrimary: palette.white,

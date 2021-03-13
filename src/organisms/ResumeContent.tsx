@@ -69,9 +69,7 @@ const ResumeContent: React.FC = () => {
 
       {/* skills */}
       <ContentSectionHeading level={2}>Skills</ContentSectionHeading>
-      <SkillBodyText>
-        Languages and Frameworks that I frequently use.
-      </SkillBodyText>
+      <SkillBodyText>Languages and Frameworks I frequently use:</SkillBodyText>
       <SkillList>
         {Skills.map((skill, idx) => (
           <SkillItem key={`skillItem-${idx}`}>{skill}</SkillItem>
@@ -139,7 +137,7 @@ const EmploymentTitle = styled.p(({ theme }) => ({
 }));
 
 const EmploymentDuration = styled.span(({ theme }) => ({
-  color: theme.color.onSurfaceDim,
+  color: theme.color.onSurfaceVeryDim,
   fontSize: theme.fontSize.xs,
 }));
 
@@ -148,6 +146,7 @@ const EmploymentType = styled.span(({ theme }) => ({
 }));
 
 const SkillBodyText = styled.p(({ theme }) => ({
+  color: theme.color.onSurfaceDim,
   marginBottom: theme.spacing.double,
 }));
 
@@ -184,7 +183,7 @@ const SkillItemAndMore = styled.li(({ theme }) => ({
   marginRight: theme.spacing.half,
   marginBottom: theme.spacing.half,
   padding: `0 ${theme.spacing.normal}px`,
-  color: theme.color.onSurfaceDim,
+  color: theme.color.onSurfaceVeryDim,
 }));
 
 export default ResumeContent;
