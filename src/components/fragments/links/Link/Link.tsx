@@ -5,13 +5,13 @@ interface Props extends React.ComponentPropsWithoutRef<'a'> {
   children: React.ReactNode;
 }
 
-const Link: React.FC<Props> = ({ children, ...props }) => (
-  <_Link rel="noreferrer noopener" {...props}>
+export const Link: React.FC<Props> = ({ children, ...props }) => (
+  <Anchor rel="noreferrer noopener" {...props}>
     {children}
-  </_Link>
+  </Anchor>
 );
 
-const _Link = styled.a(({ theme }) => ({
+const Anchor = styled.a(({ theme }) => ({
   color: theme.color.primary,
   fontWeight: 'bold',
   textDecoration: 'none',
@@ -24,5 +24,3 @@ const _Link = styled.a(({ theme }) => ({
     color: theme.color.primaryLight,
   },
 }));
-
-export default Link;

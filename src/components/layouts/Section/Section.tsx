@@ -1,15 +1,25 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const ContentSection: React.FC<Props> = ({ children }) => {
-  return <_ContentSection>{children}</_ContentSection>;
+type Props<
+  T extends keyof JSX.IntrinsicElements = 'div'
+> = React.ComponentPropsWithoutRef<T> & {
+  as?: T;
+  children?: React.ReactNode;
 };
 
-const _ContentSection = styled.section(({ theme }) => ({
+export const Section = <T extends keyof JSX.IntrinsicElements>({
+  children,
+  ...rest
+}: Props<T>) => {
+  return (
+    <>
+      <Inner {...rest}>{children}</Inner>
+    </>
+  );
+};
+
+const Inner = styled.div(({ theme }) => ({
   margin: `0 auto ${theme.spacing.quadruple}px`,
   padding: theme.spacing.quadruple,
   maxWidth: theme.constant.maxContentWidth,
@@ -27,5 +37,3 @@ const _ContentSection = styled.section(({ theme }) => ({
     padding: theme.spacing.double,
   },
 }));
-
-export default ContentSection;

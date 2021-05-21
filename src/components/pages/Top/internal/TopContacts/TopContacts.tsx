@@ -1,10 +1,13 @@
+import { Link } from '@components/fragments/links/Link';
+import useWindowSize from '@hooks/useWindowSize';
 import { Mail } from '@styled-icons/feather';
 import * as React from 'react';
 import styled from 'styled-components';
 
-import Link from '~/atoms/Link';
-import Contacts, { Contact } from '~/data/contacts';
-import useWindowSize from '~/hooks/useWindowSize';
+import { TopSection } from '../TopSection';
+import { data } from './data';
+import { Contact } from './types';
+
 import { SP_MAX_WIDTH } from '~/theme';
 
 const ContactItem = ({ serviceName, accountName, pageURL, Icon }: Contact) => {
@@ -24,10 +27,10 @@ const ContactItem = ({ serviceName, accountName, pageURL, Icon }: Contact) => {
   );
 };
 
-const ContactsContent: React.FC = () => {
+export const TopContacts: React.FC = () => {
   const { isSP } = useWindowSize();
   return (
-    <>
+    <TopSection headingID="contacts" headingText="Get in touch">
       <ContactsBodyText>
         Feel free to get in touch with me. I am always open to discussing new
         projects, ideas or opportunities to be a part of your vision. Please
@@ -47,11 +50,11 @@ const ContactsContent: React.FC = () => {
       </Email>
       <ContactsBodyText>You can also find me here:</ContactsBodyText>
       <ContactList>
-        {Contacts.map((contact, idx) => (
+        {data.map((contact, idx) => (
           <ContactItem {...contact} key={`contactItem-${idx}`} />
         ))}
       </ContactList>
-    </>
+    </TopSection>
   );
 };
 
@@ -89,5 +92,3 @@ const ContactLink = styled(Link)(({ theme }) => ({
 const AccountName = styled.span(({ theme }) => ({
   marginLeft: theme.spacing.normal,
 }));
-
-export default ContactsContent;

@@ -14,7 +14,7 @@ interface Props extends React.ComponentPropsWithoutRef<'picture'> {
   height?: number | string;
 }
 
-const Picture: React.FC<Props> = ({
+export const Picture: React.FC<Props> = ({
   sourcePaths,
   alt,
   width,
@@ -32,5 +32,3 @@ const Picture: React.FC<Props> = ({
     </picture>
   );
 };
-
-export default Picture;

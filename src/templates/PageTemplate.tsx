@@ -1,13 +1,12 @@
+import { Footer } from '@components/fragments/navs/Footer';
+import useTheme from '@hooks/useTheme';
+import useWindowSize from '@hooks/useWindowSize';
 import * as React from 'react';
 import styled from 'styled-components';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { Reset } from 'styled-reset';
 
 import CommonHead from './_CommonHead';
-
-import useTheme from '~/hooks/useTheme';
-import useWindowSize from '~/hooks/useWindowSize';
-import Footer from '~/organisms/Footer';
 
 interface Props {
   title?: string;

@@ -1,19 +1,13 @@
-// import { Briefcase } from '@styled-icons/feather';
+import { PrimaryButton } from '@components/fragments/buttons/PrimaryButton';
 import * as React from 'react';
 import styled, { DefaultTheme, CSSObject } from 'styled-components';
 
-import Button from '~/atoms/Button';
-import ContentSectionHeading from '~/atoms/ContentSectionHeading';
-import Employments, { Employment } from '~/data/resume';
+import { TopSection } from '../TopSection';
+import { data, Employment } from './data';
 
 const FIRST_VIEW_ITEM_COUNT = 3;
 
-const EmploymentItem = ({
-  title,
-  duration,
-
-  content,
-}: Employment) => {
+const EmploymentItem = ({ title, duration, content }: Employment) => {
   const durationString =
     typeof duration === 'string'
       ? duration
@@ -34,57 +28,39 @@ const EmploymentItem = ({
   );
 };
 
-const ResumeContent: React.FC = () => {
+export const TopResume: React.FC = () => {
   const [folded, setFolded] = React.useState(
-    Employments.length > FIRST_VIEW_ITEM_COUNT
+    data.employments.length > FIRST_VIEW_ITEM_COUNT
   );
 
-  const data = folded
-    ? Employments.slice(0, FIRST_VIEW_ITEM_COUNT)
-    : Employments;
-
-  const handleUnfold = () => {
-    setFolded(false);
-  };
+  const employments = folded
+    ? data.employments.slice(0, FIRST_VIEW_ITEM_COUNT)
+    : data.employments;
+  const skills = data.skills;
 
   return (
-    <>
-      {/* employments */}
-      <ContentSectionHeading level={2}>Employment</ContentSectionHeading>
+    <TopSection headingID="resume" headingText="Résumé">
       <EmploymentList>
-        {data.map((e, idx) => (
-          <EmploymentItem {...e} key={`employmentItem-${idx}`} />
+        {employments.map((employment, idx) => (
+          <EmploymentItem {...employment} key={`employmentItem-${idx}`} />
         ))}
         {folded && (
           <UnfoldButtonContainer>
-            <UnfoldButton level="primary" onClick={handleUnfold}>
+            <UnfoldButton onClick={() => setFolded(false)}>
               See More
             </UnfoldButton>
           </UnfoldButtonContainer>
         )}
       </EmploymentList>
 
-      {/* skills */}
-      <ContentSectionHeading level={2}>Skills</ContentSectionHeading>
       <SkillBodyText>Languages and frameworks I frequently use:</SkillBodyText>
       <SkillList>
-        {[
-          'HTML',
-          'CSS',
-          'JavaScript',
-          'TypeScript',
-          'React',
-          'Next.js',
-          'Vue.js',
-          'Node.js',
-          'Ruby',
-          'Go',
-        ].map((skill, idx) => (
+        {skills.map((skill, idx) => (
           <SkillItem key={`skillItem-${idx}`}>{skill}</SkillItem>
         ))}
         <SkillItemAndMore>and more...</SkillItemAndMore>
       </SkillList>
-    </>
+    </TopSection>
   );
 };
 
@@ -180,7 +156,7 @@ const UnfoldButtonContainer = styled.li(({ theme }) => ({
   },
 }));
 
-const UnfoldButton = styled(Button)(({ theme }) => ({
+const UnfoldButton = styled(PrimaryButton)(({ theme }) => ({
   margin: `${theme.spacing.normal}px 0`,
   fontSize: theme.fontSize.s,
   fontWeight: 'normal',
@@ -202,5 +178,3 @@ const SkillItemAndMore = styled.li(({ theme }) => ({
   padding: `0 ${theme.spacing.normal}px`,
   color: theme.color.onSurfaceVeryDim,
 }));
-
-export default ResumeContent;

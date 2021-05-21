@@ -1,0 +1,1 @@
+export { TopResume } from './TopResume';

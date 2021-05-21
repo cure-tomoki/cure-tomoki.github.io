@@ -1,6 +1,5 @@
+import { Link } from '@components/fragments/links/Link';
 import * as React from 'react';
-
-import Link from '~/atoms/Link';
 
 export type ResumeEntryType = 'employment' | 'lifeEvent' | 'other';
 
@@ -16,7 +15,7 @@ export interface Employment {
   content?: JSX.Element | string;
 }
 
-const Employments: Employment[] = [
+const employments: Employment[] = [
   {
     title: 'Cyberagent Inc.',
     type: 'employment',
@@ -93,4 +92,20 @@ const Employments: Employment[] = [
   },
 ];
 
-export default Employments;
+const skills: string[] = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'TypeScript',
+  'React',
+  'Next.js',
+  'Vue.js',
+  'Node.js',
+  'Ruby',
+  'Go',
+];
+
+export const data = {
+  employments,
+  skills,
+} as const;

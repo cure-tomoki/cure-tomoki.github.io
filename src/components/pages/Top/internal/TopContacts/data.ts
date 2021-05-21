@@ -1,14 +1,8 @@
 import { Twitter, Github, Facebook, Instagram } from '@styled-icons/feather';
-import { StyledIcon } from '@styled-icons/styled-icon';
 
-export interface Contact {
-  serviceName: string;
-  accountName: string;
-  pageURL: string;
-  Icon: StyledIcon;
-}
+import { Contact } from './types';
 
-const Contacts: Contact[] = [
+export const data: Contact[] = [
   {
     serviceName: 'Twitter',
     accountName: '@cure_tmk',
@@ -37,5 +31,3 @@ const Contacts: Contact[] = [
     Icon: Facebook,
   },
 ];
-
-export default Contacts;

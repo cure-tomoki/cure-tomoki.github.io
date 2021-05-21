@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
   const year = new Date().getFullYear();
   return (
     <_Footer>
@@ -45,5 +45,3 @@ const CopyRightIcon = styled.span(({ theme }) => ({
   fontSize: theme.fontSize.xxs,
   marginRight: theme.spacing.half,
 }));
-
-export default Footer;
