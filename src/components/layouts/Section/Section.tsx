@@ -1,12 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-type Props<
-  T extends keyof JSX.IntrinsicElements = 'div'
-> = React.ComponentPropsWithoutRef<T> & {
-  as?: T;
-  children?: React.ReactNode;
-};
+type Props<T extends keyof JSX.IntrinsicElements = 'div'> =
+  React.ComponentPropsWithoutRef<T> & {
+    as?: T;
+    children?: React.ReactNode;
+  };
 
 export const Section = <T extends keyof JSX.IntrinsicElements>({
   children,

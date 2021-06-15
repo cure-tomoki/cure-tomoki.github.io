@@ -32,10 +32,7 @@ const CommonHead: React.FC<Props> = ({ pageTitle }) => {
         content="https://cure-tmk.github.io/images/ogp.jpg"
         property="og:image"
       />
-      <meta
-        content="cure-tmk icon by shigureni"
-        property="og:image:alt"
-      />
+      <meta content="cure-tmk icon by shigureni" property="og:image:alt" />
       {/* twitter */}
       <meta content={title} name="twitter:title" />
       <meta content="summary" name="twitter:card" />
