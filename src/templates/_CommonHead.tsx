@@ -45,6 +45,7 @@ const CommonHead: React.FC<Props> = ({ pageTitle }) => {
         content="https://cure-tmk.github.io/images/ogp.jpg"
         name="twitter:image"
       />
+      <meta content="cure-tmk icon by shigureni" name="twitter:image:alt" />
       {/* favicon */}
       <link
         href="/apple-touch-icon.png"
