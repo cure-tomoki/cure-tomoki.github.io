@@ -34,8 +34,8 @@ export const TopContacts: React.FC = () => {
       <ContactsBodyText>
         Feel free to get in touch with me. I am always open to discussing new
         projects, ideas or opportunities to be a part of your vision. Please
-        contact me via email or Twitter DM, and I will (hopefully) get back in
-        touch with you！
+        contact me via email or Twitter DM, and I will get back in touch with
+        you！
       </ContactsBodyText>
       <Email>
         <ContactLink href="mailto:kano_tomoki@cyberagent.co.jp">

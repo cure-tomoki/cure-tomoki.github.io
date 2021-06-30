@@ -17,19 +17,12 @@ export interface Employment {
 
 const employments: Employment[] = [
   {
-    title: 'Cyberagent Inc.',
+    title: 'CyberAgent Inc.',
     type: 'employment',
     duration: {
       startYear: '2019.04',
     },
-    content: (
-      <p>
-        Web developer at{' '}
-        <Link href="https://ameblo.jp/" target="blank">
-          Ameba Blog
-        </Link>
-      </p>
-    ),
+    content: <p>Full-time web developer.</p>,
   },
   {
     title: 'BluAge Inc.',
@@ -37,7 +30,6 @@ const employments: Employment[] = [
     duration: {
       startYear: '2021.03',
     },
-    content: 'Part-time job',
   },
   {
     title: 'Anyflow Inc.',
@@ -46,7 +38,6 @@ const employments: Employment[] = [
       startYear: '2020.07',
       endYear: '2021.03',
     },
-    content: 'Part-time job',
   },
   {
     title: 'Graduated Doshisha Univ.',
@@ -83,7 +74,7 @@ const employments: Employment[] = [
     },
     content: (
       <p>
-        Frontend at{' '}
+        Web frontend at{' '}
         <Link href="https://activo.jp/" target="blank">
           activo.jp
         </Link>

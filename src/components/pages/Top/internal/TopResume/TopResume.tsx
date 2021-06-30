@@ -14,7 +14,7 @@ const EmploymentItem = ({ title, duration, content }: Employment) => {
       : [
           duration.startYear,
           `-`,
-          duration.endYear ? duration.endYear : '',
+          duration.endYear ? duration.endYear : 'today',
         ].join(' ');
   return (
     <_EmploymentItem>
