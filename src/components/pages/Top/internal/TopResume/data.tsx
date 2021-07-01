@@ -20,7 +20,7 @@ const employments: Employment[] = [
     title: 'CyberAgent Inc.',
     type: 'employment',
     duration: {
-      startYear: '2019.04',
+      startYear: '2019.4',
     },
     content: <p>Full-time web developer.</p>,
   },
@@ -28,29 +28,29 @@ const employments: Employment[] = [
     title: 'BluAge Inc.',
     type: 'employment',
     duration: {
-      startYear: '2021.03',
+      startYear: '2021.3',
     },
   },
   {
     title: 'Anyflow Inc.',
     type: 'employment',
     duration: {
-      startYear: '2020.07',
-      endYear: '2021.03',
+      startYear: '2020.7',
+      endYear: '2021.3',
     },
   },
   {
     title: 'Graduated Doshisha Univ.',
     type: 'lifeEvent',
-    duration: '2019.03',
+    duration: '2019.3',
     content: 'BSc in Computer Science',
   },
   {
     title: 'PIXTA Inc.',
     type: 'employment',
     duration: {
-      startYear: '2018.07',
-      endYear: '2019.09',
+      startYear: '2018.7',
+      endYear: '2019.9',
     },
     content: (
       <p>
@@ -69,7 +69,7 @@ const employments: Employment[] = [
     title: 'activo Inc.',
     type: 'employment',
     duration: {
-      startYear: '2016.08',
+      startYear: '2016.8',
       endYear: '2017.10',
     },
     content: (

@@ -85,41 +85,44 @@ const timelinePointFactory = (
 });
 
 const TimeLinePoint = styled.span(({ theme }) => ({
-  ...timelinePointFactory(theme, 10),
+  ...timelinePointFactory(theme, 12),
 }));
 
 const _EmploymentItem = styled.li(({ theme }) => ({
   position: 'relative',
-  color: theme.color.onSurface,
-  marginLeft: theme.spacing.normal,
+  marginLeft: theme.spacing.normal + 2,
   paddingLeft: theme.spacing.double,
   paddingBottom: theme.spacing.triple,
-  borderLeft: `2px solid ${theme.color.primary}`,
+  '&::before': {
+    position: 'absolute',
+    display: 'block',
+    content: '""',
+    top: `calc(${theme.fontSize.m} * 1.5 * 0.5)`,
+    left: -2,
+    width: 2,
+    height: '100%',
+    backgroundColor: theme.color.primary,
+  },
+  '&:last-child': {
+    paddingBottom: theme.spacing.double,
+    '&::before': {
+      backgroundColor: 'transparent',
+    },
+  },
+
   [theme.media.sp]: {
     paddingBottom: theme.spacing.double,
   },
-  '&:first-child': {
-    position: 'relative',
-    marginLeft: theme.spacing.normal + 2,
-    borderLeft: 'none',
-    '&::before': {
-      position: 'absolute',
-      display: 'block',
-      content: '""!important',
-      top: `calc(${theme.fontSize.m} * 1.5 * 0.5)`,
-      left: -2,
-      width: 2,
-      height: `calc(100% - ${theme.fontSize.m} * 1.5 * 0.5)`,
-      backgroundColor: theme.color.primary,
-    },
-  },
 }));
 
-const EmploymentTitle = styled.div({
+const EmploymentTitle = styled.div(({ theme }) => ({
   display: 'flex',
   alignItems: 'baseline',
-  justifyContent: 'space-between',
-});
+  justifyContent: 'flex-start',
+  [theme.media.sp]: {
+    justifyContent: 'space-between',
+  },
+}));
 
 const EmploymentTitleText = styled.span(({ theme }) => ({
   flex: '0 1 auto',
@@ -129,8 +132,8 @@ const EmploymentTitleText = styled.span(({ theme }) => ({
 
 const EmploymentDuration = styled.span(({ theme }) => ({
   flex: '0 0 auto',
-  marginLeft: theme.spacing.normal,
-  color: theme.color.onSurfaceVeryDim,
+  marginLeft: theme.spacing.double,
+  color: theme.color.onSurfaceDim,
   fontSize: theme.fontSize.xs,
   [theme.media.sp]: {
     marginLeft: theme.spacing.half,
